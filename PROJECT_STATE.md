@@ -7,9 +7,9 @@ Repository: `Victor-gon-code/academia_asf`
 Official digital channel currently allowed: Instagram `@asf.academiasuperforma`
 
 ## Status
-**PHASE 2 COMPLETE — WAITING FOR "CONTINUAR"**
+**PHASE 3 COMPLETE — WAITING FOR "CONTINUAR"**
 
-Do not start Phase 3 until the user explicitly replies **CONTINUAR**.
+Do not start Phase 4 until the user explicitly replies **CONTINUAR**.
 
 ## Objective
 Create a small institutional website with very high visual resolution, authored specifically for ASF, with contemporary sports-editorial direction and the historical weight of a local gym founded in 2001.
@@ -402,17 +402,36 @@ Therefore the production Hero code intentionally expects the following files und
 A ready-to-drop ZIP was generated for the user. These files are simple optimized derivatives of the canonical professor/student photograph; no people, equipment or architecture were altered.
 
 ### Phase 3 — People + training
+Status: **COMPLETE**
+
+Completed:
+- added the "O jeito ASF" chapter without introducing new photography;
+- used only public-review themes already documented for the project: acolhimento, orientação, atendimento, atenção, professores presentes and acompanhamento;
+- explicitly presented those words as a synthesis of recurring public-review themes rather than as invented quotations;
+- added no fabricated testimonial, name, rating count or staff claim;
+- built the chapter as typography + copy + line structure instead of cards;
+- added the confirmed training modalities as one editorial numbered list;
+- included only musculação, treinamento funcional, treino de força, fisiculturismo and preparação física para concursos;
+- added no price, plan, package, schedule, equipment or qualification claim;
+- kept hover effects supplementary: all words and modality content remain permanently visible without pointer interaction;
+- added subtle section-entry reveals with IntersectionObserver + Web Animations API;
+- kept native scrolling and did not add GSAP;
+- preserved reduced-motion behavior by skipping motion initialization when requested;
+- added dedicated mobile layouts for the human and training chapters;
+- reused no fake imagery and added no new binary asset dependency.
+
+### Phase 4 — Space + social proof
 Status: **NOT STARTED**
 Only start after the user replies **CONTINUAR**.
 
 Planned:
-- "O jeito ASF";
-- human/reputation proof;
-- confirmed training modalities;
-- editorial typographic interactions;
-- no cards;
-- no fake imagery;
-- mobile validation.
+- two real ASF environment photographs;
+- responsive AVIF/WebP derivatives;
+- large editorial image composition rather than gallery cards;
+- 4.9 / 5 reputation treatment with careful labeling;
+- recurring review themes without fabricated quotes;
+- lazy-loading and CLS checks;
+- mobile/desktop visual validation.
 
 ## Current problems / risks
 1. Public phone/WhatsApp/hour information is divergent and must remain unpublished.
@@ -421,6 +440,16 @@ Planned:
 4. The canonical raster logo must remain archived outside the generated SVG derivative; the SVG is a traced production derivative, not a replacement identity.
 5. Google Fonts is currently external. Font self-hosting can be reconsidered during the performance phase if measurements justify it.
 6. The Hero binary image derivatives are not committed by the current connector. Before local review/deploy, copy the provided asset pack into `public/assets/hero/`. The code and build intentionally use stable public paths for this handoff.
+
+## Main files modified in Phase 3
+- `index.html`
+- `src/scripts/motion.ts`
+- `src/styles/sections.css`
+- `src/styles/responsive.css`
+- `README.md`
+- `PROJECT_STATE.md`
+- `DESIGN_SYSTEM.md`
+- `QA_CHECKLIST.md`
 
 ## Main files modified in Phase 2
 - `index.html`
@@ -475,4 +504,4 @@ Wait for the exact user command:
 
 **CONTINUAR**
 
-Then begin Phase 3 only.
+Then begin Phase 4 only.

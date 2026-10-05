@@ -21,8 +21,13 @@
     font-size: clamp(2.75rem, 5.3vw, 4.6rem);
   }
 
-  .history__header {
+  .history__header,
+  .people__header {
     column-gap: 3.5rem;
+  }
+
+  .training__header {
+    gap: 3.5rem;
   }
 }
 
@@ -191,12 +196,16 @@
     bottom: var(--gutter);
   }
 
-  .history__inner {
+  .history__inner,
+  .people__inner,
+  .training__inner {
     padding-top: clamp(4.5rem, 18vw, 7rem);
     padding-bottom: clamp(5rem, 20vw, 8rem);
   }
 
-  .history__header {
+  .history__header,
+  .people__header,
+  .training__header {
     display: block;
   }
 
@@ -206,7 +215,9 @@
     font-size: clamp(2.7rem, 12vw, 4.5rem);
   }
 
-  .history__lead {
+  .history__lead,
+  .people__intro,
+  .training__lead {
     max-width: 25rem;
     margin-top: 1.8rem;
   }
@@ -242,6 +253,81 @@
     justify-self: start;
     font-size: clamp(1.2rem, 5.3vw, 1.55rem);
   }
+
+  .people__header h2,
+  .training__header h2 {
+    max-width: 10ch;
+    margin-top: 1.3rem;
+    font-size: clamp(2.75rem, 12.7vw, 4.8rem);
+    line-height: 0.92;
+  }
+
+  .people__statement {
+    margin-top: clamp(3.6rem, 15vw, 5.8rem);
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+
+  .people__statement p {
+    max-width: 18ch;
+    font-size: clamp(2rem, 9vw, 3.1rem);
+  }
+
+  .people__themes {
+    margin-top: clamp(3.8rem, 15vw, 6rem);
+  }
+
+  .people__themes li {
+    min-height: auto;
+    padding-block: 1.35rem;
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+
+  .people__theme-word {
+    font-size: clamp(2.15rem, 11.5vw, 4.1rem);
+  }
+
+  .people__theme-note {
+    max-width: 25rem;
+    justify-self: start;
+  }
+
+  .people__source {
+    max-width: 28rem;
+  }
+
+  .training__list {
+    margin-top: clamp(3.5rem, 14vw, 5.8rem);
+  }
+
+  .training__list li {
+    min-height: auto;
+    padding-block: 1.25rem;
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .training__name {
+    max-width: 18ch;
+    font-size: clamp(1.85rem, 9.6vw, 3.8rem);
+    line-height: 0.95;
+  }
+
+  .training__closing {
+    margin-top: clamp(3.5rem, 14vw, 5.8rem);
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .training__closing strong {
+    max-width: 14ch;
+    font-size: clamp(1.75rem, 8vw, 2.8rem);
+  }
+
+  .training__closing p {
+    justify-self: start;
+  }
 }
 
 @media (max-width: 23rem) {
@@ -267,13 +353,29 @@
   .history__year {
     font-size: clamp(2.7rem, 13vw, 3.2rem);
   }
+
+  .people__header h2,
+  .training__header h2 {
+    font-size: clamp(2.45rem, 12vw, 3rem);
+  }
+
+  .people__theme-word {
+    font-size: clamp(2rem, 10.8vw, 2.75rem);
+  }
+
+  .training__name {
+    font-size: clamp(1.7rem, 9vw, 2.45rem);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .primary-nav,
   .menu-toggle__icon i,
   .primary-nav__links a::after,
-  .primary-nav__instagram::after {
+  .primary-nav__instagram::after,
+  .people__theme-word,
+  .training__name,
+  .training__list li::after {
     transition: none;
   }
 

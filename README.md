@@ -4,7 +4,7 @@ Site institucional da ASF Academia Super Forma — Bagé / RS.
 
 ## Estado atual
 
-A Fase 2 implementa a abertura real do site: Hero + narrativa histórica 2001 → 2026. A próxima etapa adicionará gente, prova humana e modalidades.
+A Fase 3 acrescenta os capítulos "O jeito ASF" e "Treino", usando síntese de avaliações públicas e somente modalidades confirmadas. A próxima etapa entra nas fotografias reais do espaço e na prova social.
 
 ## Stack
 
@@ -93,3 +93,17 @@ public/assets/hero/
 ```
 
 O arquivo `ASSET_HANDOFF.md` registra o mesmo procedimento dentro do repositório.
+
+
+## Fase 3
+
+A seção humana resume temas recorrentes de avaliações públicas sem criar depoimentos individuais.
+
+A seção de treino lista somente:
+- musculação;
+- treinamento funcional;
+- treino de força;
+- fisiculturismo;
+- preparação física para concursos.
+
+Não há assets novos nesta fase.

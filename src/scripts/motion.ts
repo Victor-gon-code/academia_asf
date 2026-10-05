@@ -12,6 +12,63 @@ function animateIn(
   void animation.finished.then(() => animation.cancel()).catch(() => undefined);
 }
 
+function initSectionReveals(): void {
+  if (!('IntersectionObserver' in window)) return;
+
+  const blocks = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal-block]'));
+  const lists = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal-list]'));
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const target = entry.target as HTMLElement;
+        if (target.dataset.revealed === 'true') {
+          observer.unobserve(target);
+          return;
+        }
+
+        target.dataset.revealed = 'true';
+
+        if (target.matches('[data-reveal-list]')) {
+          Array.from(target.children).forEach((child, index) => {
+            animateIn(
+              child as HTMLElement,
+              [
+                { opacity: 0, transform: 'translateY(18px)' },
+                { opacity: 1, transform: 'translateY(0)' },
+              ],
+              {
+                duration: 460,
+                delay: Math.min(index * 55, 220),
+                easing: 'cubic-bezier(.2,.75,.25,1)',
+              },
+            );
+          });
+        } else {
+          animateIn(
+            target,
+            [
+              { opacity: 0, transform: 'translateY(16px)' },
+              { opacity: 1, transform: 'translateY(0)' },
+            ],
+            { duration: 520, easing: 'cubic-bezier(.2,.75,.25,1)' },
+          );
+        }
+
+        observer.unobserve(target);
+      });
+    },
+    {
+      rootMargin: '0px 0px -12% 0px',
+      threshold: 0.12,
+    },
+  );
+
+  [...blocks, ...lists].forEach((target) => revealObserver.observe(target));
+}
+
 export function initMotion(): void {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const hero = document.querySelector<HTMLElement>('[data-hero]');
@@ -68,6 +125,8 @@ export function initMotion(): void {
     ],
     { duration: 420, delay: 520, easing: 'cubic-bezier(.2,.75,.25,1)' },
   );
+
+  initSectionReveals();
 
   let ticking = false;
 

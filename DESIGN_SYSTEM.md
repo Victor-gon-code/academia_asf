@@ -604,3 +604,39 @@ If later phases genuinely require timeline orchestration or complex ScrollTrigge
 
 ### Reduced motion
 When `prefers-reduced-motion: reduce` is active, the motion module returns before starting significant animation and CSS removes transform-based effects.
+
+
+---
+
+## 21. Phase 3 people + training implementation
+
+### Human chapter
+"O jeito ASF" is intentionally text-led.
+
+The chapter does not invent testimonials. It presents recurring public-review themes as themes:
+- acolhimento;
+- orientação;
+- atendimento;
+- atenção;
+- professores presentes;
+- acompanhamento.
+
+The strongest visual element is typography, not a testimonial carousel or a grid of benefits.
+
+### Training chapter
+Confirmed modalities appear as one numbered editorial list:
+1. Musculação
+2. Treinamento funcional
+3. Treino de força
+4. Fisiculturismo
+5. Preparação física para concursos
+
+No extra modality, package, plan, promise or price is added.
+
+### Interaction
+Hover only adds a slight horizontal shift / orange line. No required information depends on hover.
+
+### Motion
+Phase 3 still does not justify GSAP.
+
+IntersectionObserver triggers a small number of WAAPI reveals. Content remains present in the DOM and visible when JavaScript is unavailable; animation is enhancement only.

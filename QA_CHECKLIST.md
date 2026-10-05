@@ -87,17 +87,17 @@ This checklist is cumulative. A phase is not complete because the code compiles;
 - [x] No console errors.
 
 ## Phase 3 — people + training
-- [ ] "O jeito ASF" text is specific to guidance/presence.
-- [ ] No generic agency/AI phrases.
-- [ ] Public-review themes are summarized honestly.
-- [ ] No invented testimonial is shown.
-- [ ] No testimonial text exceeds what is justified.
-- [ ] Training modalities are only confirmed modalities.
-- [ ] Modalities are not five generic cards.
-- [ ] Hover enhancement has equivalent non-hover access.
-- [ ] Keyboard focus is clear.
-- [ ] Mobile layout has no overlaps/crops.
-- [ ] No fake modality imagery added.
+- [x] "O jeito ASF" text is specific to guidance/presence.
+- [x] No generic agency/AI phrases.
+- [x] Public-review themes are summarized honestly.
+- [x] No invented testimonial is shown.
+- [x] No testimonial text exceeds what is justified.
+- [x] Training modalities are only confirmed modalities.
+- [x] Modalities are not five generic cards.
+- [x] Hover enhancement has equivalent non-hover access.
+- [x] Keyboard focus is clear.
+- [x] Mobile layout has no overlaps/crops.
+- [x] No fake modality imagery added.
 - [ ] No console errors.
 
 ## Phase 4 — space + social proof
