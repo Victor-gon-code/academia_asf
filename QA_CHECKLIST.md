@@ -119,6 +119,7 @@ This checklist is cumulative. A phase is not complete because the code compiles;
 - [ ] No console errors.
 
 ## Phase 5 — health + visit + final
+- [x] Production build for the complete Phase 5 codebase passes. GitHub Actions run `37384055174` succeeded.
 - [x] "Uma Questão de Saúde" chapter remains visually restrained.
 - [x] No filler effect added.
 - [x] Confirmed address is exact.

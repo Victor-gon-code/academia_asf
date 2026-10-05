@@ -467,6 +467,8 @@ The pack contains only technical resize/compression derivatives of the two canon
 Status: **COMPLETE**
 
 Completed:
+- GitHub Actions production build passed on commit `1571c35af0820dd1bf27c86664627ef096806c84` (run `37384055174`), validating the complete codebase through Phase 5;
+- the earlier Phase 4 workflow run `37363625968` ended because its build job was cancelled before completion; the Phase 5 successful build includes and validates the Phase 4 code as well;
 - added the restrained "Uma Questão de Saúde" signature chapter;
 - used the historical signature as the chapter logic rather than adding a new visual gimmick;
 - implemented the copy "Em 2001 já era uma questão de saúde. 25 anos depois, continua sendo.";
@@ -479,6 +481,11 @@ Completed:
 - added a minimal footer with brand, Bagé / RS, 2001 — 2026 and Instagram;
 - reused the existing reveal system; no dependency was added;
 - no new binary assets are required in Phase 5.
+
+Validation note:
+- production build is confirmed successful for the complete Phase 5 codebase;
+- no unconfirmed phone, hours or pricing strings are present in the final content sections;
+- integrated browser/screenshot QA remains intentionally reserved for Phase 6 after the two asset handoff ZIPs are present locally.
 
 ### Phase 6 — Deep responsiveness
 Status: **NOT STARTED**
