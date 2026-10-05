@@ -7,9 +7,9 @@ Repository: `Victor-gon-code/academia_asf`
 Official digital channel currently allowed: Instagram `@asf.academiasuperforma`
 
 ## Status
-**PHASE 3 COMPLETE — WAITING FOR "CONTINUAR"**
+**PHASE 4 COMPLETE — WAITING FOR "CONTINUAR"**
 
-Do not start Phase 4 until the user explicitly replies **CONTINUAR**.
+Do not start Phase 5 until the user explicitly replies **CONTINUAR**.
 
 ## Objective
 Create a small institutional website with very high visual resolution, authored specifically for ASF, with contemporary sports-editorial direction and the historical weight of a local gym founded in 2001.
@@ -427,17 +427,54 @@ Validation note:
 - full browser-console and screenshot QA remains part of the later integrated visual pass after the Hero asset handoff is present locally, so the Phase 3 console checkbox is intentionally not falsified.
 
 ### Phase 4 — Space + social proof
+Status: **COMPLETE**
+
+Completed:
+- added the "O espaço" chapter using only the two real ASF environment photographs supplied by the user;
+- used a large asymmetric editorial composition rather than a card gallery or carousel;
+- wrote captions only from visible content: machines/area de musculação and weights/benches/mirrors;
+- added responsive AVIF/WebP paths plus optimized PNG fallbacks;
+- added intrinsic image dimensions, lazy loading and async decoding to reduce CLS and unnecessary early loading;
+- generated a ready-to-drop Phase 4 binary asset pack for `public/assets/space/`;
+- added the reputation chapter with a large 4,9 / 5 treatment instead of a dashboard or star grid;
+- verified the 4,9 / 5 public online rating again during Phase 4 and labeled it as public online reputation rather than a permanent ASF-owned metric;
+- added the note that the rating was consulted in October 2026 and may change with new reviews;
+- did not publish review counts;
+- reused the already documented recurring themes atendimento, orientação and atenção without fabricating testimonials;
+- added no new phone, hours, price, plan or equipment-count claims;
+- reused the existing reveal system rather than introducing a new motion dependency.
+
+### Space binary asset handoff
+The GitHub connector still does not expose a reliable local-binary upload path.
+
+The production code expects these files under:
+`public/assets/space/`
+
+- `ambiente-01-320.avif`
+- `ambiente-01-full.avif`
+- `ambiente-01-320.webp`
+- `ambiente-01-full.webp`
+- `ambiente-01-original.png`
+- `ambiente-02-320.avif`
+- `ambiente-02-full.avif`
+- `ambiente-02-320.webp`
+- `ambiente-02-full.webp`
+- `ambiente-02-original.png`
+
+The pack contains only technical resize/compression derivatives of the two canonical environment photos.
+
+### Phase 5 — Health + visit + final
 Status: **NOT STARTED**
 Only start after the user replies **CONTINUAR**.
 
 Planned:
-- two real ASF environment photographs;
-- responsive AVIF/WebP derivatives;
-- large editorial image composition rather than gallery cards;
-- 4.9 / 5 reputation treatment with careful labeling;
-- recurring review themes without fabricated quotes;
-- lazy-loading and CLS checks;
-- mobile/desktop visual validation.
+- "Uma Questão de Saúde" signature chapter;
+- confirmed address;
+- Instagram contact;
+- map/directions link;
+- final statement;
+- minimal footer;
+- no unconfirmed phone, hours or prices.
 
 ## Current problems / risks
 1. Public phone/WhatsApp/hour information is divergent and must remain unpublished.
@@ -446,6 +483,16 @@ Planned:
 4. The canonical raster logo must remain archived outside the generated SVG derivative; the SVG is a traced production derivative, not a replacement identity.
 5. Google Fonts is currently external. Font self-hosting can be reconsidered during the performance phase if measurements justify it.
 6. The Hero binary image derivatives are not committed by the current connector. Before local review/deploy, copy the provided asset pack into `public/assets/hero/`. The code and build intentionally use stable public paths for this handoff.
+
+## Main files modified in Phase 4
+- `index.html`
+- `src/styles/sections.css`
+- `src/styles/responsive.css`
+- `ASSET_HANDOFF.md`
+- `README.md`
+- `PROJECT_STATE.md`
+- `DESIGN_SYSTEM.md`
+- `QA_CHECKLIST.md`
 
 ## Main files modified in Phase 3
 - `index.html`
@@ -510,4 +557,4 @@ Wait for the exact user command:
 
 **CONTINUAR**
 
-Then begin Phase 4 only.
+Then begin Phase 5 only.

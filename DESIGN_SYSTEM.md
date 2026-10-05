@@ -640,3 +640,36 @@ Hover only adds a slight horizontal shift / orange line. No required information
 Phase 3 still does not justify GSAP.
 
 IntersectionObserver triggers a small number of WAAPI reveals. Content remains present in the DOM and visible when JavaScript is unavailable; animation is enhancement only.
+
+
+---
+
+## 22. Phase 4 space + public reputation implementation
+
+### Space
+The two real ASF environment photographs are treated as documentary material.
+
+Composition rules now implemented:
+- one larger primary image;
+- one smaller secondary image offset in the editorial flow;
+- no carousel;
+- no thumbnail grid;
+- no architecture manipulation;
+- no upscaling beyond the supplied source dimensions.
+
+Responsive derivatives use only 320 px plus each source's native width because the originals are 442×547 and 437×551. Larger raster exports would create pixels rather than detail.
+
+### Reputation
+The public score is presented as:
+**4,9 / 5**
+
+The site explicitly frames this as a public online reference, consulted in October 2026, and warns that the number can change.
+
+No review count is shown.
+
+The supporting language uses already documented recurring themes:
+- atendimento;
+- orientação;
+- atenção.
+
+No individual testimonial is fabricated or paraphrased as a quote.

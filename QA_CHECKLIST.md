@@ -102,20 +102,20 @@ This checklist is cumulative. A phase is not complete because the code compiles;
 - [ ] No console errors.
 
 ## Phase 4 — space + social proof
-- [ ] Only real ASF environment photography is used.
-- [ ] No architecture/equipment is fabricated.
-- [ ] Photo 01 appears large enough to read the space.
-- [ ] Photo 02 appears as a distinct second moment.
-- [ ] No unnecessary thumbnail grid.
-- [ ] No slider unless a real need emerges.
-- [ ] Image crops preserve natural proportions.
-- [ ] Responsive derivatives load correctly.
-- [ ] Non-LCP images are lazy-loaded.
-- [ ] Width/height or aspect-ratio prevents CLS.
-- [ ] 4.9 / 5 is labeled as public evaluations.
-- [ ] No unstable review count is hardcoded.
-- [ ] Social proof does not look like a dashboard.
-- [ ] No repeated star-icon decoration.
+- [x] Only real ASF environment photography is used.
+- [x] No architecture/equipment is fabricated.
+- [x] Photo 01 appears large enough to read the space.
+- [x] Photo 02 appears as a distinct second moment.
+- [x] No unnecessary thumbnail grid.
+- [x] No slider unless a real need emerges.
+- [x] Image crops preserve natural proportions.
+- [x] Responsive derivatives load correctly.
+- [x] Non-LCP images are lazy-loaded.
+- [x] Width/height or aspect-ratio prevents CLS.
+- [x] 4.9 / 5 is labeled as public evaluations.
+- [x] No unstable review count is hardcoded.
+- [x] Social proof does not look like a dashboard.
+- [x] No repeated star-icon decoration.
 - [ ] No console errors.
 
 ## Phase 5 — health + visit + final

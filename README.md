@@ -4,7 +4,7 @@ Site institucional da ASF Academia Super Forma — Bagé / RS.
 
 ## Estado atual
 
-A Fase 3 acrescenta os capítulos "O jeito ASF" e "Treino", usando síntese de avaliações públicas e somente modalidades confirmadas. A próxima etapa entra nas fotografias reais do espaço e na prova social.
+A Fase 4 acrescenta "O espaço" com as duas fotografias reais da ASF e uma seção de reputação pública 4,9 / 5. A próxima etapa fecha a narrativa com a assinatura de saúde, visita, endereço e final.
 
 ## Stack
 
@@ -26,7 +26,7 @@ Archivo e Newsreader são carregadas pelo Google Fonts com `display=swap` e fall
 - `public/favicon.svg` usa as letras ASF extraídas do próprio mark, com a paleta validada da marca.
 - A fotografia professor + aluno já entra no Hero através de AVIF/WebP responsivo e JPEG fallback.
 - Como o conector GitHub desta sessão não envia binários locais de forma confiável, os derivados do Hero são entregues em um pacote separado e devem ser colocados exatamente em `public/assets/hero/` depois do pull.
-- As duas fotografias de ambiente continuam reservadas para a fase “O Espaço”.
+- As duas fotografias de ambiente entram na Fase 4 por AVIF/WebP responsivo e PNG fallback. Como o conector atual não envia binários locais com segurança, o pacote é entregue separadamente para `public/assets/space/`.
 
 Paleta-base validada nesta fase:
 
@@ -107,3 +107,24 @@ A seção de treino lista somente:
 - preparação física para concursos.
 
 Não há assets novos nesta fase.
+
+
+## Assets da Fase 4
+
+O código espera:
+
+```text
+public/assets/space/
+  ambiente-01-320.avif
+  ambiente-01-full.avif
+  ambiente-01-320.webp
+  ambiente-01-full.webp
+  ambiente-01-original.png
+  ambiente-02-320.avif
+  ambiente-02-full.avif
+  ambiente-02-320.webp
+  ambiente-02-full.webp
+  ambiente-02-original.png
+```
+
+As imagens são somente resize/compressão das fotos reais fornecidas. Não há upscale, reconstrução ou alteração de conteúdo.

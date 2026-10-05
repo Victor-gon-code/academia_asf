@@ -43,3 +43,28 @@ Processing performed:
 - original JPEG preserved as fallback.
 
 No people, equipment, architecture or visual content were generated or altered.
+
+
+---
+
+## Phase 4 — space photographs
+
+Extract the Phase 4 ZIP at the repository root.
+
+It creates:
+
+`public/assets/space/`
+
+Required files:
+- `ambiente-01-320.avif`
+- `ambiente-01-full.avif`
+- `ambiente-01-320.webp`
+- `ambiente-01-full.webp`
+- `ambiente-01-original.png`
+- `ambiente-02-320.avif`
+- `ambiente-02-full.avif`
+- `ambiente-02-320.webp`
+- `ambiente-02-full.webp`
+- `ambiente-02-original.png`
+
+The source photographs are only resized/compressed. They are not upscaled or visually reconstructed.
