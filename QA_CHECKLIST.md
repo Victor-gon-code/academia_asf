@@ -87,6 +87,7 @@ This checklist is cumulative. A phase is not complete because the code compiles;
 - [x] No console errors.
 
 ## Phase 3 — people + training
+- [x] Production build for Phase 3 passes. GitHub Actions run `37349751122` succeeded.
 - [x] "O jeito ASF" text is specific to guidance/presence.
 - [x] No generic agency/AI phrases.
 - [x] Public-review themes are summarized honestly.

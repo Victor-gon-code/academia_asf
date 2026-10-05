@@ -405,6 +405,7 @@ A ready-to-drop ZIP was generated for the user. These files are simple optimized
 Status: **COMPLETE**
 
 Completed:
+- GitHub Actions production build passed on commit `04d2b8a72efe18921b7a3d1899fe7e51b8a43c69` (run `37349751122`);
 - added the "O jeito ASF" chapter without introducing new photography;
 - used only public-review themes already documented for the project: acolhimento, orientação, atendimento, atenção, professores presentes and acompanhamento;
 - explicitly presented those words as a synthesis of recurring public-review themes rather than as invented quotations;
@@ -419,6 +420,11 @@ Completed:
 - preserved reduced-motion behavior by skipping motion initialization when requested;
 - added dedicated mobile layouts for the human and training chapters;
 - reused no fake imagery and added no new binary asset dependency.
+
+Validation note:
+- the production build is confirmed;
+- the new Phase 3 code introduces no image paths or external binaries;
+- full browser-console and screenshot QA remains part of the later integrated visual pass after the Hero asset handoff is present locally, so the Phase 3 console checkbox is intentionally not falsified.
 
 ### Phase 4 — Space + social proof
 Status: **NOT STARTED**
