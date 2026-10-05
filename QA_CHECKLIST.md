@@ -66,25 +66,25 @@ This checklist is cumulative. A phase is not complete because the code compiles;
 - [x] Production build succeeds. GitHub Actions run `37330177870` passed on the Phase 1 feature commit.
 
 ## Phase 2 — hero + history
-- [ ] Hero uses professor/student photo.
-- [ ] Desktop composition protects faces/hands/action.
-- [ ] Mobile text is not placed on faces.
-- [ ] H1 is never clipped.
-- [ ] Hero does not force 100svh if content needs more space.
-- [ ] Intro motion is subtle.
-- [ ] No preloader.
-- [ ] Hero image LCP strategy checked.
-- [ ] 2001 / 2026 section is factual only.
-- [ ] No invented intermediate milestones.
-- [ ] Orange timeline/connection has meaning.
-- [ ] Scroll remains native.
-- [ ] 320 tested.
-- [ ] 390 tested.
-- [ ] 768 tested.
-- [ ] 1366 tested.
-- [ ] 1920 tested.
-- [ ] Reduced motion works.
-- [ ] No console errors.
+- [x] Hero uses professor/student photo.
+- [x] Desktop composition protects faces/hands/action.
+- [x] Mobile text is not placed on faces.
+- [x] H1 is never clipped.
+- [x] Hero does not force 100svh if content needs more space.
+- [x] Intro motion is subtle.
+- [x] No preloader.
+- [x] Hero image LCP strategy checked.
+- [x] 2001 / 2026 section is factual only.
+- [x] No invented intermediate milestones.
+- [x] Orange timeline/connection has meaning.
+- [x] Scroll remains native.
+- [x] 320 tested.
+- [x] 390 tested.
+- [x] 768 tested.
+- [x] 1366 tested.
+- [x] 1920 tested.
+- [x] Reduced motion works.
+- [x] No console errors.
 
 ## Phase 3 — people + training
 - [ ] "O jeito ASF" text is specific to guidance/presence.

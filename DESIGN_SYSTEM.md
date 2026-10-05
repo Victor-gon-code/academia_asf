@@ -573,3 +573,34 @@ Locked implementation choices:
 - asset payload is demand-driven: canonical photographs are not bundled until their narrative chapters use them.
 
 The current foundation intentionally stops before the Hero. It is a technical/visual base, not an attempt to pre-build later phases.
+
+
+---
+
+## 20. Phase 2 opening narrative implementation
+The Hero and 2001 → 2026 chapter now define the opening rhythm.
+
+### Hero composition
+- desktop: dark editorial copy area + real professor/student photograph;
+- mobile: copy first, photograph below;
+- important faces, hands and coaching action remain readable;
+- orange is reserved for the health line and chapter connection;
+- the Hero may grow beyond one viewport on mobile when content needs it.
+
+### History composition
+- off-white chapter;
+- large 2001 / 2026 endpoints;
+- orange connection line;
+- no fabricated intermediate dates;
+- historical logo appears as a small archive/signature object.
+
+### Motion technology decision
+GSAP was **not added** in Phase 2.
+
+Reason:
+the required motion is limited to opening reveals, a maximum 1.03 image scale, and two simple scroll-progress lines. Native Web Animations API plus a requestAnimationFrame-throttled passive scroll listener solves these needs with less JavaScript and no extra dependency.
+
+If later phases genuinely require timeline orchestration or complex ScrollTrigger behavior, GSAP can still be introduced with a documented reason.
+
+### Reduced motion
+When `prefers-reduced-motion: reduce` is active, the motion module returns before starting significant animation and CSS removes transform-based effects.

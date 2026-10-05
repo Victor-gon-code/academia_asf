@@ -6,5 +6,7 @@ import './styles/sections.css';
 import './styles/responsive.css';
 
 import { initNavigation } from './scripts/navigation';
+import { initMotion } from './scripts/motion';
 
 initNavigation();
+initMotion();

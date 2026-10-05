@@ -7,9 +7,9 @@ Repository: `Victor-gon-code/academia_asf`
 Official digital channel currently allowed: Instagram `@asf.academiasuperforma`
 
 ## Status
-**PHASE 1 COMPLETE — WAITING FOR "CONTINUAR"**
+**PHASE 2 COMPLETE — WAITING FOR "CONTINUAR"**
 
-Do not start Phase 2 until the user explicitly replies **CONTINUAR**.
+Do not start Phase 3 until the user explicitly replies **CONTINUAR**.
 
 ## Objective
 Create a small institutional website with very high visual resolution, authored specifically for ASF, with contemporary sports-editorial direction and the historical weight of a local gym founded in 2001.
@@ -359,16 +359,60 @@ Production build validation:
 - `npm run build` therefore passed in the repository CI environment.
 
 ### Phase 2 — Hero + history
+Status: **COMPLETE**
+
+Completed:
+- replaced the Phase 1 foundation preview with the real opening narrative;
+- built a split editorial Hero using the professor + student canonical photograph;
+- kept text away from faces and important action;
+- added dedicated mobile composition with text first and photography below;
+- added responsive AVIF/WebP `<picture>` markup and original JPEG fallback;
+- added explicit LCP preload for the Hero AVIF source;
+- implemented the headline "HÁ 25 ANOS, TREINO É UMA QUESTÃO DE SAÚDE";
+- built the 2001 → 2026 historical chapter without inventing intermediate milestones;
+- added the historical ASF logo as a small archive/signature object;
+- used native Web Animations API + requestAnimationFrame scroll progress instead of adding GSAP because the current motion needs are small and bounded;
+- added restrained opening masks, Hero photo scale from 1.00 → 1.03, orange handoff line, and history-line progress;
+- preserved native scrolling with no pin, scroll snap, smooth-scroll library or scroll-jacking;
+- respected `prefers-reduced-motion` by bypassing significant animation;
+- TypeScript validation passed locally with `tsc --noEmit`;
+- visually reviewed 320×568, 390×844, 768×1024, 1366×768 and 1920×1080;
+- confirmed no horizontal overflow at all reviewed widths;
+- verified the mobile menu after the Hero integration;
+- verified Escape close and body-scroll restoration;
+- ran the motion script in Chromium with no page/console errors;
+- verified scroll-linked transforms and reduced-motion bypass.
+
+### Hero binary asset handoff
+The GitHub connector used in this session can write repository text/code but does not provide a reliable local-binary upload path for these image derivatives.
+
+Therefore the production Hero code intentionally expects the following files under:
+`public/assets/hero/`
+
+- `professor-aluno-640.avif`
+- `professor-aluno-960.avif`
+- `professor-aluno-1280.avif`
+- `professor-aluno-1649.avif`
+- `professor-aluno-640.webp`
+- `professor-aluno-960.webp`
+- `professor-aluno-1280.webp`
+- `professor-aluno-1649.webp`
+- `professor-aluno-original.jpg`
+
+A ready-to-drop ZIP was generated for the user. These files are simple optimized derivatives of the canonical professor/student photograph; no people, equipment or architecture were altered.
+
+### Phase 3 — People + training
 Status: **NOT STARTED**
 Only start after the user replies **CONTINUAR**.
 
 Planned:
-- final Header integration with opening narrative;
-- Hero using professor + student photo;
-- 2001 → 2026 chapter;
-- restrained motion;
-- LCP strategy for the Hero image;
-- deep checks at 320, 390, 768, 1366 and 1920.
+- "O jeito ASF";
+- human/reputation proof;
+- confirmed training modalities;
+- editorial typographic interactions;
+- no cards;
+- no fake imagery;
+- mobile validation.
 
 ## Current problems / risks
 1. Public phone/WhatsApp/hour information is divergent and must remain unpublished.
@@ -376,6 +420,19 @@ Planned:
 3. 4.9/5 is changeable public reputation data; if surfaced in production, it should be reviewed near launch.
 4. The canonical raster logo must remain archived outside the generated SVG derivative; the SVG is a traced production derivative, not a replacement identity.
 5. Google Fonts is currently external. Font self-hosting can be reconsidered during the performance phase if measurements justify it.
+6. The Hero binary image derivatives are not committed by the current connector. Before local review/deploy, copy the provided asset pack into `public/assets/hero/`. The code and build intentionally use stable public paths for this handoff.
+
+## Main files modified in Phase 2
+- `index.html`
+- `src/main.ts`
+- `src/scripts/motion.ts`
+- `src/styles/sections.css`
+- `src/styles/responsive.css`
+- `ASSET_HANDOFF.md`
+- `README.md`
+- `PROJECT_STATE.md`
+- `DESIGN_SYSTEM.md`
+- `QA_CHECKLIST.md`
 
 ## Main files modified in Phase 1
 - `package.json`
@@ -407,17 +464,15 @@ Planned:
 
 ## Things intentionally not tested yet
 The following belong to later phases:
-- real Hero/photo LCP after the Hero exists;
-- below-fold lazy-loading strategy after photographs enter their chapters;
-- GSAP/ScrollTrigger behavior (GSAP is intentionally not installed yet);
-- full narrative-page browser audit;
-- Lighthouse/Core Web Vitals on the production composition;
+- below-fold image loading for the space chapter;
+- final Core Web Vitals/Lighthouse on the complete production page;
 - final SEO/JSON-LD;
-- canonical URL after the production domain is known.
+- canonical URL after the production domain is known;
+- final cross-browser production audit after every chapter exists.
 
 ## Next action
 Wait for the exact user command:
 
 **CONTINUAR**
 
-Then begin Phase 2 only.
+Then begin Phase 3 only.

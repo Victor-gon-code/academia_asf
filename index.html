@@ -8,6 +8,14 @@
     <title>ASF Academia Super Forma — Bagé / RS</title>
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/hero/professor-aluno-960.avif"
+      imagesrcset="/assets/hero/professor-aluno-640.avif 640w, /assets/hero/professor-aluno-960.avif 960w, /assets/hero/professor-aluno-1280.avif 1280w, /assets/hero/professor-aluno-1649.avif 1649w"
+      imagesizes="(max-width: 767px) 100vw, 55vw"
+      type="image/avif"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,34 +69,99 @@
     </header>
 
     <main id="conteudo">
-      <section class="foundation-preview" aria-labelledby="foundation-title">
-        <div class="foundation-preview__frame">
-          <div class="foundation-preview__intro">
-            <p class="eyebrow">Bagé — RS · 2001 — 2026</p>
-            <h1 id="foundation-title">ASF Academia<br />Super Forma</h1>
-            <p class="foundation-preview__note">
-              Fundação visual do projeto. Os capítulos narrativos começam na próxima fase.
-            </p>
+      <section class="hero" aria-labelledby="hero-title" data-hero>
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <p class="hero__kicker" data-hero-kicker>ASF Academia Super Forma · Bagé — RS</p>
+
+            <h1 id="hero-title" class="hero__title" aria-label="Há 25 anos, treino é uma questão de saúde">
+              <span class="hero__line"><span data-hero-line>HÁ 25 ANOS,</span></span>
+              <span class="hero__line"><span data-hero-line>TREINO É UMA</span></span>
+              <span class="hero__line hero__line--last"><span data-hero-line>QUESTÃO DE SAÚDE</span></span>
+            </h1>
+
+            <div class="hero__meta" data-hero-meta>
+              <p>Desde 2001</p>
+              <p>25 anos de rotina, treino e gente</p>
+            </div>
           </div>
 
-          <figure class="foundation-preview__brand" aria-label="Marca ASF">
-            <img
-              src="/src/assets/derived/logo-asf-clean.svg"
-              width="512"
-              height="235"
-              alt="Logo da ASF Academia Super Forma com a assinatura Uma Questão de Saúde"
-            />
+          <figure class="hero__media" data-hero-media>
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  /assets/hero/professor-aluno-640.avif 640w,
+                  /assets/hero/professor-aluno-960.avif 960w,
+                  /assets/hero/professor-aluno-1280.avif 1280w,
+                  /assets/hero/professor-aluno-1649.avif 1649w
+                "
+                sizes="(max-width: 767px) 100vw, 55vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  /assets/hero/professor-aluno-640.webp 640w,
+                  /assets/hero/professor-aluno-960.webp 960w,
+                  /assets/hero/professor-aluno-1280.webp 1280w,
+                  /assets/hero/professor-aluno-1649.webp 1649w
+                "
+                sizes="(max-width: 767px) 100vw, 55vw"
+              />
+              <img
+                src="/assets/hero/professor-aluno-original.jpg"
+                width="1649"
+                height="2048"
+                alt="Professor da ASF acompanha de perto um aluno durante um exercício na academia"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </picture>
+            <span class="hero__photo-note" aria-hidden="true">Treino acompanhado</span>
           </figure>
+        </div>
 
-          <div class="foundation-preview__palette" aria-label="Paleta-base da ASF">
-            <span>Uma questão de saúde</span>
-            <span>25 anos</span>
+        <div class="hero__handoff" aria-hidden="true">
+          <span data-hero-handoff></span>
+        </div>
+      </section>
+
+      <section class="history" id="historia" aria-labelledby="history-title" data-history>
+        <div class="history__inner">
+          <header class="history__header">
+            <p class="eyebrow">2001 — 2026</p>
+            <h2 id="history-title">25 anos não aparecem de uma vez.</h2>
+            <p class="history__lead">
+              São treinos, pessoas e dias comuns repetidos por muito tempo.
+            </p>
+          </header>
+
+          <div class="history__timeline" aria-label="Da fundação em 2001 aos 25 anos em 2026">
+            <strong class="history__year">2001</strong>
+            <div class="history__track" aria-hidden="true"><span data-history-line></span></div>
+            <strong class="history__year history__year--end">2026</strong>
+          </div>
+
+          <div class="history__closing">
+            <div class="history__archive">
+              <img
+                src="/src/assets/derived/logo-asf-clean.svg"
+                width="512"
+                height="235"
+                alt="Logo da ASF Academia Super Forma com a assinatura Uma Questão de Saúde"
+                loading="lazy"
+              />
+              <span>Uma questão de saúde</span>
+            </div>
+
+            <p class="history__copy">
+              Desde 2001, a ASF faz parte da rotina de quem escolheu cuidar do corpo sem esquecer da saúde.
+            </p>
           </div>
         </div>
       </section>
 
       <div class="future-anchors" aria-hidden="true">
-        <span id="historia"></span>
         <span id="treino"></span>
         <span id="espaco"></span>
         <span id="visite"></span>
