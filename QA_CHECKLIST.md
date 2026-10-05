@@ -119,17 +119,17 @@ This checklist is cumulative. A phase is not complete because the code compiles;
 - [ ] No console errors.
 
 ## Phase 5 — health + visit + final
-- [ ] "Uma Questão de Saúde" chapter remains visually restrained.
-- [ ] No filler effect added.
-- [ ] Confirmed address is exact.
-- [ ] Map link resolves to the correct ASF location.
-- [ ] Instagram link points to `@asf.academiasuperforma`.
-- [ ] No unconfirmed phone appears.
-- [ ] No unconfirmed hours appear.
-- [ ] No unconfirmed pricing appears.
-- [ ] Final scene remains simple.
-- [ ] Footer is minimal.
-- [ ] All CTAs are real links/buttons with correct semantics.
+- [x] "Uma Questão de Saúde" chapter remains visually restrained.
+- [x] No filler effect added.
+- [x] Confirmed address is exact.
+- [x] Map link resolves to the correct ASF location.
+- [x] Instagram link points to `@asf.academiasuperforma`.
+- [x] No unconfirmed phone appears.
+- [x] No unconfirmed hours appear.
+- [x] No unconfirmed pricing appears.
+- [x] Final scene remains simple.
+- [x] Footer is minimal.
+- [x] All CTAs are real links/buttons with correct semantics.
 - [ ] No console errors.
 
 ## Phase 6 — deep responsiveness

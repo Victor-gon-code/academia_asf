@@ -7,9 +7,9 @@ Repository: `Victor-gon-code/academia_asf`
 Official digital channel currently allowed: Instagram `@asf.academiasuperforma`
 
 ## Status
-**PHASE 4 COMPLETE — WAITING FOR "CONTINUAR"**
+**PHASE 5 COMPLETE — WAITING FOR "CONTINUAR"**
 
-Do not start Phase 5 until the user explicitly replies **CONTINUAR**.
+Do not start Phase 6 until the user explicitly replies **CONTINUAR**.
 
 ## Objective
 Create a small institutional website with very high visual resolution, authored specifically for ASF, with contemporary sports-editorial direction and the historical weight of a local gym founded in 2001.
@@ -464,17 +464,33 @@ The production code expects these files under:
 The pack contains only technical resize/compression derivatives of the two canonical environment photos.
 
 ### Phase 5 — Health + visit + final
+Status: **COMPLETE**
+
+Completed:
+- added the restrained "Uma Questão de Saúde" signature chapter;
+- used the historical signature as the chapter logic rather than adding a new visual gimmick;
+- implemented the copy "Em 2001 já era uma questão de saúde. 25 anos depois, continua sendo.";
+- added the confirmed public address: Rua Quinze de Novembro, 1510, São Judas, Bagé / RS;
+- added a directions link using the confirmed address;
+- kept Instagram `@asf.academiasuperforma` as the only digital contact channel;
+- added the public positioning "A 1ª academia da Zona Leste" as a supporting visit note;
+- added no phone, WhatsApp, opening hours, prices, plans, enrollment conditions or trial-class promises;
+- added the final statement "25 anos depois, a porta continua aberta.";
+- added a minimal footer with brand, Bagé / RS, 2001 — 2026 and Instagram;
+- reused the existing reveal system; no dependency was added;
+- no new binary assets are required in Phase 5.
+
+### Phase 6 — Deep responsiveness
 Status: **NOT STARTED**
 Only start after the user replies **CONTINUAR**.
 
 Planned:
-- "Uma Questão de Saúde" signature chapter;
-- confirmed address;
-- Instagram contact;
-- map/directions link;
-- final statement;
-- minimal footer;
-- no unconfirmed phone, hours or prices.
+- full integrated layout audit at all target viewport sizes;
+- verify all assets after local handoff packs are present;
+- inspect horizontal overflow, clipped letters, overlaps, empty gaps and section heights;
+- verify mobile menu throughout the complete page;
+- verify portrait/landscape transitions and native scroll behavior;
+- fix any integrated issues before performance/accessibility audit.
 
 ## Current problems / risks
 1. Public phone/WhatsApp/hour information is divergent and must remain unpublished.
@@ -483,6 +499,15 @@ Planned:
 4. The canonical raster logo must remain archived outside the generated SVG derivative; the SVG is a traced production derivative, not a replacement identity.
 5. Google Fonts is currently external. Font self-hosting can be reconsidered during the performance phase if measurements justify it.
 6. The Hero binary image derivatives are not committed by the current connector. Before local review/deploy, copy the provided asset pack into `public/assets/hero/`. The code and build intentionally use stable public paths for this handoff.
+
+## Main files modified in Phase 5
+- `index.html`
+- `src/styles/sections.css`
+- `src/styles/responsive.css`
+- `README.md`
+- `PROJECT_STATE.md`
+- `DESIGN_SYSTEM.md`
+- `QA_CHECKLIST.md`
 
 ## Main files modified in Phase 4
 - `index.html`
@@ -557,4 +582,4 @@ Wait for the exact user command:
 
 **CONTINUAR**
 
-Then begin Phase 5 only.
+Then begin Phase 6 only.

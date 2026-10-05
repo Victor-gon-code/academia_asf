@@ -4,7 +4,7 @@ Site institucional da ASF Academia Super Forma — Bagé / RS.
 
 ## Estado atual
 
-A Fase 4 acrescenta "O espaço" com as duas fotografias reais da ASF e uma seção de reputação pública 4,9 / 5. A próxima etapa fecha a narrativa com a assinatura de saúde, visita, endereço e final.
+A Fase 5 fecha a narrativa: assinatura "Uma Questão de Saúde", endereço confirmado, mapa, Instagram, encerramento e footer. A próxima etapa é a auditoria responsiva integrada.
 
 ## Stack
 
@@ -128,3 +128,21 @@ public/assets/space/
 ```
 
 As imagens são somente resize/compressão das fotos reais fornecidas. Não há upscale, reconstrução ou alteração de conteúdo.
+
+
+## Fase 5
+
+A fase final de conteúdo não adiciona assets binários.
+
+Informações publicadas:
+- Rua Quinze de Novembro, 1510, São Judas, Bagé / RS;
+- Instagram `@asf.academiasuperforma`;
+- posicionamento público "A 1ª academia da Zona Leste".
+
+Continuam deliberadamente fora do site até confirmação:
+- telefone / WhatsApp;
+- horários;
+- preços;
+- planos;
+- promoções;
+- condições de matrícula.

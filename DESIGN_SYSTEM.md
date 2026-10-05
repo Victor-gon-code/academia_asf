@@ -673,3 +673,39 @@ The supporting language uses already documented recurring themes:
 - atenção.
 
 No individual testimonial is fabricated or paraphrased as a quote.
+
+
+---
+
+## 23. Phase 5 health + visit + closing implementation
+
+### Health signature
+The historical phrase becomes a full chapter without decorative spectacle:
+
+"Em 2001 já era uma questão de saúde.
+
+25 anos depois,
+continua sendo."
+
+The section uses the ASF orange as a meaningful brand surface and keeps the composition almost entirely typographic.
+
+### Visit
+Only confirmed information is presented:
+- ASF Academia Super Forma;
+- Rua Quinze de Novembro, 1510;
+- São Judas;
+- Bagé / RS;
+- Instagram `@asf.academiasuperforma`.
+
+The map action is a simple directions link. No map embed is loaded, avoiding unnecessary page weight and third-party UI inside the design.
+
+The supporting line uses the already confirmed public positioning:
+"A 1ª academia da Zona Leste".
+
+### Final
+The narrative closes with:
+"25 anos depois, a porta continua aberta."
+
+The footer remains deliberately minimal.
+
+No phone, WhatsApp, hours, price or plan is published.
