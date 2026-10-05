@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#030708" />
+    <meta name="description" content="ASF Academia Super Forma, em Bagé — RS. Uma academia com história, acompanhamento e treino levado a sério desde 2001." />
+    <title>ASF Academia Super Forma — Bagé / RS</title>
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="brand" href="#conteudo" aria-label="ASF Academia Super Forma — início">
+          <img
+            class="brand__mark"
+            src="/src/assets/derived/logo-asf-mark.svg"
+            width="512"
+            height="213"
+            alt=""
+          />
+          <span class="brand__text">Academia Super Forma</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-menu-toggle
+        >
+          <span class="menu-toggle__label" data-menu-label>Menu</span>
+          <span class="menu-toggle__icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-navigation" aria-label="Navegação principal" data-primary-nav>
+          <div class="primary-nav__links">
+            <a href="#historia">História</a>
+            <a href="#treino">Treino</a>
+            <a href="#espaco">Espaço</a>
+            <a href="#visite">Visite</a>
+          </div>
+          <a
+            class="primary-nav__instagram"
+            href="https://www.instagram.com/asf.academiasuperforma/"
+            target="_blank"
+            rel="noreferrer"
+          >Instagram</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="foundation-preview" aria-labelledby="foundation-title">
+        <div class="foundation-preview__frame">
+          <div class="foundation-preview__intro">
+            <p class="eyebrow">Bagé — RS · 2001 — 2026</p>
+            <h1 id="foundation-title">ASF Academia<br />Super Forma</h1>
+            <p class="foundation-preview__note">
+              Fundação visual do projeto. Os capítulos narrativos começam na próxima fase.
+            </p>
+          </div>
+
+          <figure class="foundation-preview__brand" aria-label="Marca ASF">
+            <img
+              src="/src/assets/derived/logo-asf-clean.svg"
+              width="512"
+              height="235"
+              alt="Logo da ASF Academia Super Forma com a assinatura Uma Questão de Saúde"
+            />
+          </figure>
+
+          <div class="foundation-preview__palette" aria-label="Paleta-base da ASF">
+            <span>Uma questão de saúde</span>
+            <span>25 anos</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="future-anchors" aria-hidden="true">
+        <span id="historia"></span>
+        <span id="treino"></span>
+        <span id="espaco"></span>
+        <span id="visite"></span>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

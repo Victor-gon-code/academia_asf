@@ -71,10 +71,10 @@ Do not use:
 
 ## 4. Color system
 
-### Provisional extracted brand colors
-The received logo is JPEG-compressed and includes a baked checkerboard. Therefore these values are the working Phase 0 extraction, to be revalidated after logo cleanup in Phase 1.
+### Validated working brand colors
+The received logo is JPEG-compressed and includes a baked checkerboard. In Phase 1 the checkerboard was removed and the production derivative was compared against the canonical mark. These are the working digital values now locked for implementation.
 
-- ASF Orange — `#F0802E`
+- ASF Orange — `#F1802E`
 - ASF Near Black — `#030708`
 - White — `#FFFFFF`
 
@@ -555,3 +555,21 @@ The impact of ASF will come from:
 
 Not from:
 3D, glow, generic UI effects or spectacle.
+
+
+---
+
+## 19. Phase 1 implementation checkpoint
+The foundation has been visually reviewed at 320, 390, 768, 1366 and 1920 px.
+
+Locked implementation choices:
+- Vite + TypeScript;
+- no React;
+- no Tailwind;
+- no UI component library;
+- no GSAP until Phase 2 demonstrates a real motion need;
+- native scrolling;
+- dedicated mobile navigation;
+- asset payload is demand-driven: canonical photographs are not bundled until their narrative chapters use them.
+
+The current foundation intentionally stops before the Hero. It is a technical/visual base, not an attempt to pre-build later phases.

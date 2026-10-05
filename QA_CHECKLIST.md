@@ -37,33 +37,33 @@ This checklist is cumulative. A phase is not complete because the code compiles;
 - [x] Phase 0 checkpoint committed.
 
 ## Phase 1 — foundation
-- [ ] Vite + TypeScript initialized only after CONTINUAR.
-- [ ] No unnecessary framework introduced.
-- [ ] Dependencies documented by purpose.
-- [ ] Semantic HTML shell exists.
-- [ ] CSS reset is scoped and predictable.
-- [ ] Design tokens created from validated palette.
-- [ ] Archivo/Newsreader loading strategy tested.
-- [ ] Only needed font weights loaded.
-- [ ] Header works with keyboard.
-- [ ] Mobile menu opens/closes correctly.
-- [ ] Closing menu restores scrolling.
-- [ ] Menu never exceeds viewport.
-- [ ] No FOUC/code flash caused by navigation implementation.
-- [ ] Clean logo derivative preserves original geometry.
-- [ ] Checkerboard is not visible.
-- [ ] Original logo is preserved unchanged.
-- [ ] Favicon remains readable at small sizes.
-- [ ] Original photos are preserved.
-- [ ] Environment photo binaries/dimensions verified before derivatives.
-- [ ] First responsive image derivatives generated.
-- [ ] 320 px foundation checked.
-- [ ] 390 px foundation checked.
-- [ ] 768 px foundation checked.
-- [ ] 1366 px foundation checked.
-- [ ] 1920 px foundation checked.
-- [ ] No horizontal overflow.
-- [ ] Production build succeeds.
+- [x] Vite + TypeScript initialized only after CONTINUAR.
+- [x] No unnecessary framework introduced.
+- [x] Dependencies documented by purpose.
+- [x] Semantic HTML shell exists.
+- [x] CSS reset is scoped and predictable.
+- [x] Design tokens created from validated palette.
+- [x] Archivo/Newsreader loading strategy tested.
+- [x] Only needed font weights loaded.
+- [x] Header works with keyboard.
+- [x] Mobile menu opens/closes correctly.
+- [x] Closing menu restores scrolling.
+- [x] Menu never exceeds viewport.
+- [x] No FOUC/code flash caused by navigation implementation.
+- [x] Clean logo derivative preserves original geometry.
+- [x] Checkerboard is not visible.
+- [x] Original logo is preserved unchanged.
+- [x] Favicon remains readable at small sizes.
+- [x] Original photos are preserved.
+- [x] Environment photo binaries/dimensions verified before derivatives.
+- [x] First responsive image derivatives generated.
+- [x] 320 px foundation checked.
+- [x] 390 px foundation checked.
+- [x] 768 px foundation checked.
+- [x] 1366 px foundation checked.
+- [x] 1920 px foundation checked.
+- [x] No horizontal overflow.
+- [ ] Production build succeeds. *(GitHub Actions verification runs on the Phase 1 commit.)*
 
 ## Phase 2 — hero + history
 - [ ] Hero uses professor/student photo.

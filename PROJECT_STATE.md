@@ -7,9 +7,9 @@ Repository: `Victor-gon-code/academia_asf`
 Official digital channel currently allowed: Instagram `@asf.academiasuperforma`
 
 ## Status
-**PHASE 0 COMPLETE — WAITING FOR "CONTINUAR"**
+**PHASE 1 COMPLETE — WAITING FOR "CONTINUAR"**
 
-Do not start Phase 1 until the user explicitly replies **CONTINUAR**.
+Do not start Phase 2 until the user explicitly replies **CONTINUAR**.
 
 ## Objective
 Create a small institutional website with very high visual resolution, authored specifically for ASF, with contemporary sports-editorial direction and the historical weight of a local gym founded in 2001.
@@ -88,7 +88,7 @@ Required handling:
 - derive favicon from the ASF letters/symbol rather than forcing the full oval at tiny sizes.
 
 Color sampling from the received JPEG (provisional because JPEG compression and baked checkerboard influence edge pixels):
-- dominant ASF orange core ≈ `#F0802E`;
+- validated ASF orange core: `#F1802E`;
 - near-black core ≈ `#030708`;
 - white ≈ `#FFFFFF`.
 
@@ -120,7 +120,14 @@ Planned use:
 - no heavy stylization or architecture manipulation.
 
 ### Asset 03 — environment 01
-Received visually in the conversation as a portrait photograph.
+Received canonical file verified in Phase 1:
+`Imagem do ChatGPT 5 de out. de 2026, 11_24_54.png`
+
+Technical facts:
+- PNG / RGBA;
+- 442 × 547 px;
+- source size ≈ 362,729 bytes;
+- portrait orientation.
 
 Visual findings:
 - white resistance machines;
@@ -130,11 +137,17 @@ Visual findings:
 - straightforward, real local-gym character;
 - useful for the first large environment composition.
 
-Important runtime note:
-the image is visible in the conversation but its original binary was not exposed as a mountable file in the current tool runtime. Therefore exact pixel dimensions, byte size and compression metadata must be verified before any derivative is exported in Phase 1.
+Initial responsive WebP/AVIF derivatives were generated and inspected locally in Phase 1. They will enter the production bundle only when the “O Espaço” chapter is implemented, avoiding unused payload now.
 
 ### Asset 04 — environment 02
-Received visually in the conversation as a portrait photograph.
+Received canonical file verified in Phase 1:
+`Imagem do ChatGPT 5 de out. de 2026, 11_25_03.png`
+
+Technical facts:
+- PNG / RGBA;
+- 437 × 551 px;
+- source size ≈ 387,640 bytes;
+- portrait orientation.
 
 Visual findings:
 - dumbbell rack in foreground;
@@ -144,8 +157,7 @@ Visual findings:
 - bright ceiling;
 - useful visual depth and a different training-area reading from Asset 03.
 
-Important runtime note:
-the image is visible in the conversation but its original binary was not exposed as a mountable file in the current tool runtime. Therefore exact pixel dimensions, byte size and compression metadata must be verified before any derivative is exported in Phase 1.
+Initial responsive WebP/AVIF derivatives were generated and inspected locally in Phase 1. They will enter the production bundle only when the “O Espaço” chapter is implemented.
 
 ## Asset policy
 These four images are canonical.
@@ -319,27 +331,70 @@ Completed:
 No large website sections were developed.
 
 ### Phase 1 — Foundation
+Status: **COMPLETE**
+
+Completed:
+- initialized Vite + TypeScript without React or a UI framework;
+- created semantic document shell;
+- split CSS into reset, tokens, base, layout, sections and responsive layers;
+- validated working ASF palette after cleaning the logo: `#F1802E`, `#030708`, `#FFFFFF` plus warm UI paper `#F3EFE6`;
+- kept Archivo + Newsreader with only the planned weights;
+- built the thin desktop header and dedicated mobile navigation;
+- implemented keyboard/Escape handling, focus-visible states and body scroll restoration;
+- generated a clean SVG derivative by automatically tracing the cleaned canonical raster logo rather than freely redrawing it;
+- generated a compact ASF mark derivative for the header;
+- generated an ASF favicon using letter geometry extracted from the canonical mark;
+- verified exact dimensions of all four canonical images;
+- generated initial AVIF/WebP photo derivatives locally for later chapters without shipping unused image payload in Phase 1;
+- validated TypeScript locally with `tsc --noEmit`;
+- visually reviewed the foundation in Chromium at 320×568, 390×844, 768×1024, 1366×768 and 1920×1080;
+- confirmed no horizontal overflow at those viewports;
+- tested mobile menu open/close, focus transfer, Escape close and scroll lock restoration;
+- added GitHub Actions production-build validation.
+
+No Hero/history narrative was implemented; that remains Phase 2.
+
+### Phase 2 — Hero + history
 Status: **NOT STARTED**
 Only start after the user replies **CONTINUAR**.
 
 Planned:
-- initialize Vite + TypeScript;
-- semantic base;
-- CSS reset/tokens;
-- typography;
-- finalized palette;
-- header;
-- favicon;
-- canonical asset import and first optimized derivatives;
-- base responsive structure;
-- mobile + desktop foundation validation.
+- final Header integration with opening narrative;
+- Hero using professor + student photo;
+- 2001 → 2026 chapter;
+- restrained motion;
+- LCP strategy for the Hero image;
+- deep checks at 320, 390, 768, 1366 and 1920.
 
 ## Current problems / risks
-1. The logo is a JPEG with a baked checkerboard. It requires a carefully cleaned derivative in Phase 1.
-2. The two environment images are visible to the model but their exact original binaries were not available in the current runtime. Do not export derivatives until their real files/dimensions are accessible.
-3. Public phone/WhatsApp/hour information is divergent and must remain unpublished.
-4. No final production domain is defined yet, so canonical URL metadata remains pending.
-5. 4.9/5 is changeable public reputation data; if surfaced in production, it should be reviewed near launch.
+1. Public phone/WhatsApp/hour information is divergent and must remain unpublished.
+2. No final production domain is defined yet, so canonical URL metadata remains pending.
+3. 4.9/5 is changeable public reputation data; if surfaced in production, it should be reviewed near launch.
+4. The canonical raster logo must remain archived outside the generated SVG derivative; the SVG is a traced production derivative, not a replacement identity.
+5. Google Fonts is currently external. Font self-hosting can be reconsidered during the performance phase if measurements justify it.
+
+## Main files modified in Phase 1
+- `package.json`
+- `tsconfig.json`
+- `index.html`
+- `.gitignore`
+- `.github/workflows/ci.yml`
+- `README.md`
+- `src/main.ts`
+- `src/vite-env.d.ts`
+- `src/scripts/navigation.ts`
+- `src/styles/reset.css`
+- `src/styles/tokens.css`
+- `src/styles/base.css`
+- `src/styles/layout.css`
+- `src/styles/sections.css`
+- `src/styles/responsive.css`
+- `src/assets/derived/logo-asf-clean.svg`
+- `src/assets/derived/logo-asf-mark.svg`
+- `public/favicon.svg`
+- `PROJECT_STATE.md`
+- `DESIGN_SYSTEM.md`
+- `QA_CHECKLIST.md`
 
 ## Main files modified in Phase 0
 - `PROJECT_STATE.md`
@@ -347,24 +402,18 @@ Planned:
 - `QA_CHECKLIST.md`
 
 ## Things intentionally not tested yet
-- Vite dev server;
-- production build;
-- browser rendering;
-- console errors;
-- mobile menu behavior;
-- real breakpoint layouts;
-- image derivative loading;
-- LCP/CLS/INP;
-- keyboard navigation;
-- reduced motion;
-- Lighthouse;
-- final SEO/JSON-LD.
-
-These belong to later phases because Phase 0 intentionally contains no site implementation.
+The following belong to later phases:
+- real Hero/photo LCP after the Hero exists;
+- below-fold lazy-loading strategy after photographs enter their chapters;
+- GSAP/ScrollTrigger behavior (GSAP is intentionally not installed yet);
+- full narrative-page browser audit;
+- Lighthouse/Core Web Vitals on the production composition;
+- final SEO/JSON-LD;
+- canonical URL after the production domain is known.
 
 ## Next action
 Wait for the exact user command:
 
 **CONTINUAR**
 
-Then begin Phase 1 only.
+Then begin Phase 2 only.
