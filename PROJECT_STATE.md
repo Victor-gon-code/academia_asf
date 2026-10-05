@@ -354,6 +354,10 @@ Completed:
 
 No Hero/history narrative was implemented; that remains Phase 2.
 
+Production build validation:
+- GitHub Actions run `37330177870` completed successfully on the Phase 1 feature commit `15182c1b52fadc82aaa536fd21f2e3361ec99dff`.
+- `npm run build` therefore passed in the repository CI environment.
+
 ### Phase 2 — Hero + history
 Status: **NOT STARTED**
 Only start after the user replies **CONTINUAR**.

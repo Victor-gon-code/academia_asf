@@ -63,7 +63,7 @@ This checklist is cumulative. A phase is not complete because the code compiles;
 - [x] 1366 px foundation checked.
 - [x] 1920 px foundation checked.
 - [x] No horizontal overflow.
-- [ ] Production build succeeds. *(GitHub Actions verification runs on the Phase 1 commit.)*
+- [x] Production build succeeds. GitHub Actions run `37330177870` passed on the Phase 1 feature commit.
 
 ## Phase 2 — hero + history
 - [ ] Hero uses professor/student photo.
