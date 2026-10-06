@@ -134,6 +134,7 @@ This checklist is cumulative. A phase is not complete because the code compiles;
 - [ ] No console errors.
 
 ## Phase 6 — deep responsiveness
+- [x] Production build after Phase 6 fixes passes. GitHub Actions run `37392968044` succeeded.
 - [x] Integrated Chromium audit used both Hero and Space asset packs.
 Test all:
 - [x] 320 × 568

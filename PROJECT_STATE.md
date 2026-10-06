@@ -491,6 +491,7 @@ Validation note:
 Status: **COMPLETE**
 
 Completed:
+- GitHub Actions production build passed on commit `ceb58a41fbd18596b43d14604c40a518a5ee0164` (run `37392968044`);
 - assembled a local integrated Chromium QA build using the complete site code plus both image handoff packs;
 - verified all required target viewports: 320×568, 360×800, 390×844, 430×932, 768×1024, 1024×768, 1280×720, 1366×768, 1440×900 and 1920×1080;
 - confirmed zero horizontal document overflow at every required viewport;
