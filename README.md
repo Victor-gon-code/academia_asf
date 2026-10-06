@@ -4,7 +4,7 @@ Site institucional da ASF Academia Super Forma — Bagé / RS.
 
 ## Estado atual
 
-A Fase 7 conclui performance, acessibilidade e metadata técnica. A próxima etapa é a auditoria visual final do site completo.
+A Fase 8 conclui a auditoria visual final. O projeto está pronto para pull, inserção dos dois pacotes de assets, revisão local e preparação de deploy.
 
 ## Stack
 
@@ -184,3 +184,27 @@ Medições dos AVIF do handoff:
 - Espaço 02: ~24 / 39 KB.
 
 O domínio final ainda não foi definido. Por isso canonical, `og:url`, `og:image` absoluto e sitemap com URL permanecem deliberadamente pendentes.
+
+
+## Fase 8 — auditoria visual final
+
+A narrativa completa foi revisada em mobile, tablet, desktop e ultra-wide.
+
+Polimentos finais:
+- textos de fonte/validação que ainda pareciam documentação interna foram convertidos em copy de produção;
+- a seção de espaço ficou mais direta e menos autorreferente;
+- a nota da reputação pública ficou curta e humana;
+- o fechamento de visita reforça 2001 + Zona Leste sem acrescentar dado operacional não confirmado.
+
+Não foram adicionadas bibliotecas, imagens ou efeitos novos.
+
+### Estado final antes do deploy
+
+Ainda dependem do contexto de produção:
+- canonical e URLs sociais;
+- sitemap com domínio;
+- conferência final do 4,9/5;
+- inspeção de Archivo + Newsreader no domínio real;
+- Core Web Vitals/Lighthouse do host real.
+
+Os dois pacotes de imagens entregues anteriormente continuam sendo os únicos assets externos ao GitHub necessários.

@@ -830,3 +830,32 @@ Deferred until a real production domain exists:
 - absolute `og:image`;
 - sitemap URL;
 - domain-based JSON-LD `@id`.
+
+
+---
+
+## 26. Phase 8 final visual audit
+
+The finished direction remains intentionally restrained.
+
+Final visual decisions confirmed:
+- real ASF photography is more important than extra effects;
+- large typography is used as narrative, not decoration;
+- orange appears as a brand signature rather than a generic accent sprayed across every section;
+- alternating paper / near-black / orange chapters create rhythm without card-based UI;
+- the page does not use glassmorphism, generic dashboards, feature-card grids, ornamental 3D or scroll-jacking;
+- mobile keeps its own composition and does not inherit cramped desktop grids.
+
+### Final copy polish
+Production-facing copy must not sound like research notes or internal safeguards.
+
+Therefore Phase 8 simplifies source/disclaimer language while preserving factual truth:
+- review themes remain explicitly presented as recurring public-review themes;
+- modalities remain only the five confirmed modalities;
+- the public 4.9/5 note remains dated and changeable;
+- no unconfirmed operational information is added.
+
+### Final identity test
+The final page should still fail the "rename the gym" test in a useful way: replacing ASF with another name would leave behind the 2001/2026 continuity, "Uma Questão de Saúde", Zona Leste context, real ASF photographs, real public-review framing and the specific Bagé address.
+
+That is the intended proof that the site is authored for ASF rather than assembled from a gym template.

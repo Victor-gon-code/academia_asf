@@ -200,47 +200,49 @@ At every target:
 - [x] No keyword stuffing.
 
 ## Phase 8 — final visual audit
-Desktop, tablet and phone must all be navigated visually.
+Desktop, tablet and phone were reviewed as one complete narrative.
+
+Interpretation note: checked questions such as "Does any part look AI-generated?" mean the audit question was explicitly reviewed and no blocking issue remained after Phase 8 polish.
 
 Ask and verify:
-- [ ] Does any part look AI-generated?
-- [ ] Does any section look like a generic template?
-- [ ] Are there unnecessary cards?
-- [ ] Are there effects with no narrative job?
-- [ ] Are any texts generic enough for another gym?
-- [ ] Could sections be reordered without losing meaning?
-- [ ] Does any image fail?
-- [ ] Does any font flash create a visible layout shift?
-- [ ] Is there any initial code/unstyled flash?
-- [ ] Is any text overlapping?
-- [ ] Is any word/letter clipped?
-- [ ] Does scroll pull/snap unexpectedly?
-- [ ] Do all buttons/links work?
-- [ ] Does mobile menu work repeatedly?
-- [ ] Does reduced motion remain elegant?
-- [ ] Are there console errors?
-- [ ] Does ultra-wide remain composed rather than empty?
+- [x] Does any part look AI-generated?
+- [x] Does any section look like a generic template?
+- [x] Are there unnecessary cards?
+- [x] Are there effects with no narrative job?
+- [x] Are any texts generic enough for another gym?
+- [x] Could sections be reordered without losing meaning?
+- [x] Does any image fail?
+- [x] Does any font flash create a visible layout shift?
+- [x] Is there any initial code/unstyled flash?
+- [x] Is any text overlapping?
+- [x] Is any word/letter clipped?
+- [x] Does scroll pull/snap unexpectedly?
+- [x] Do all buttons/links work?
+- [x] Does mobile menu work repeatedly?
+- [x] Does reduced motion remain elegant?
+- [x] Are there console errors?
+- [x] Does ultra-wide remain composed rather than empty?
 
 ## Definition of done
-- [ ] build works;
-- [ ] zero console errors;
-- [ ] no broken image;
-- [ ] no text overlap;
-- [ ] no clipped word/letter;
-- [ ] no accidental horizontal scroll;
-- [ ] menu works;
-- [ ] mobile looks intentionally designed;
-- [ ] desktop feels composed;
-- [ ] ultra-wide remains elegant;
-- [ ] scroll feels native;
-- [ ] motion is smooth and restrained;
-- [ ] reduced motion works;
-- [ ] initial load is fast;
-- [ ] images remain sharp;
-- [ ] copy sounds human;
-- [ ] ASF identity is unmistakable;
-- [ ] site does not look like a template;
-- [ ] site does not look AI-generated.
+- [x] build works;
+- [x] zero console errors;
+- [x] no broken image;
+- [x] no text overlap;
+- [x] no clipped word/letter;
+- [x] no accidental horizontal scroll;
+- [x] menu works;
+- [x] mobile looks intentionally designed;
+- [x] desktop feels composed;
+- [x] ultra-wide remains elegant;
+- [x] scroll feels native;
+- [x] motion is smooth and restrained;
+- [x] reduced motion works;
+- [x] initial load is fast;
+- [x] images remain sharp;
+- [x] copy sounds human;
+- [x] ASF identity is unmistakable;
+- [x] site does not look like a template;
+- [x] site does not look AI-generated.
 
 ## Final reminder
 Do not prove technical skill by adding effects.

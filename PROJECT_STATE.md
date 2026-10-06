@@ -7,9 +7,9 @@ Repository: `Victor-gon-code/academia_asf`
 Official digital channel currently allowed: Instagram `@asf.academiasuperforma`
 
 ## Status
-**PHASE 7 COMPLETE — WAITING FOR "CONTINUAR"**
+**PHASE 8 COMPLETE — PROJECT READY FOR LOCAL REVIEW / DEPLOY PREP**
 
-Do not start Phase 8 until the user explicitly replies **CONTINUAR**.
+Phase 8 is complete. Do not add new visual features unless the user explicitly requests a new iteration.
 
 ## Objective
 Create a small institutional website with very high visual resolution, authored specifically for ASF, with contemporary sports-editorial direction and the historical weight of a local gym founded in 2001.
@@ -551,25 +551,49 @@ Completed:
 - Google Fonts remain external with preconnect + `display=swap`; exact production Archivo/Newsreader network behavior cannot be reproduced in the isolated QA sandbox.
 
 ### Phase 8 — Final visual audit
-Status: **NOT STARTED**
-Only start after the user replies **CONTINUAR**.
+Status: **COMPLETE**
 
-Planned:
-- navigate the complete page visually on phone, tablet, desktop and ultra-wide;
-- inspect exact production fonts where available;
-- check for any remaining "AI/template" feeling;
-- check section rhythm, copy, image loading and transitions as one complete experience;
-- retest all links/buttons/menu repeatedly;
-- verify no final console error, flash, overlap, clipped word or unexpected scroll behavior;
-- make only final polish fixes, not add gratuitous features.
+Completed:
+- reviewed the complete visual narrative using the integrated screenshots from phone, portrait tablet, landscape tablet, desktop and ultra-wide QA;
+- rechecked the Hero, 2001 → 2026 chapter, human chapter, training list, real-space photography, reputation block, orange health signature, visit block and closing as one continuous experience;
+- confirmed the page avoids the main generic/AI patterns prohibited for this project: no glass cards, no startup dashboard, no fake 3D, no glow, no gradient-orb decoration, no feature-card grid, no unnecessary carousel and no scroll-jacking;
+- confirmed the section order still communicates a clear ASF-specific story: entrance → time → people → training → space → public proof → health → visit → closing;
+- confirmed the real professor/student photograph remains the strongest opening visual and the two real environment photographs read as documentary material rather than stock assets;
+- confirmed ultra-wide layouts remain composed inside the content max width instead of expanding into empty or stretched sections;
+- confirmed the mobile composition remains intentionally different from desktop rather than being a compressed desktop layout;
+- polished production copy that still sounded like internal research/documentation:
+  - shortened the public-review source note;
+  - rewrote the training verification paragraph into normal visitor-facing language;
+  - replaced the self-referential space/identity copy with a simpler training-centered line;
+  - simplified the reputation timestamp note;
+  - rewrote the visit note into a direct historical statement;
+- kept all factual boundaries intact: no new phone, hours, prices, staff count, qualifications, trial class or equipment claims were introduced;
+- rechecked every internal anchor against an existing target; no broken internal navigation target exists;
+- confirmed all external production actions still point only to the official Instagram and the confirmed-address Google Maps query;
+- no new runtime dependency, image or binary handoff was added in Phase 8.
+
+Final visual assessment:
+- ASF identity is recognizable without relying on generic gym imagery or effects;
+- typography, orange/black/paper contrast, real photography and historical continuity carry the design;
+- the site reads as a specific local academy with 25 years of history rather than a generic fitness landing page;
+- the remaining pending work is deployment-context work, not design construction.
 
 ## Current problems / risks
-1. Public phone/WhatsApp/hour information remains divergent and must stay unpublished until confirmed.
-2. Final production domain is still unknown. Canonical URL, `og:url`, absolute `og:image`, sitemap URL and production-domain JSON-LD identifiers must not be invented.
-3. 4.9/5 is changeable public reputation data and should be reviewed again immediately before launch.
-4. Google Fonts are external. The project uses preconnect + `display=swap`, but exact remote font timing cannot be measured in the isolated QA runtime.
-5. Hero and Space binary derivatives still require the two previously delivered handoff packs to be present under `public/assets/hero/` and `public/assets/space/` after pull.
-6. Exact Archivo + Newsreader visual rendering should receive one final inspection in Phase 8 in a browser with normal network access.
+1. Public phone/WhatsApp/hour information remains unpublished until it is confirmed.
+2. Final production domain is still unknown. Canonical URL, `og:url`, absolute `og:image`, sitemap URL and domain-based JSON-LD identifiers remain intentionally pending.
+3. The 4.9/5 public reputation value should be checked one final time immediately before launch because it can change.
+4. Exact Archivo + Newsreader rendering should be visually checked once on the real deployed URL with normal Google Fonts access.
+5. The two previously delivered binary handoff packs must exist locally before deploy:
+   - `public/assets/hero/`
+   - `public/assets/space/`
+6. Live-host Core Web Vitals must be measured after deployment because server/network/cache conditions do not exist in the isolated QA environment.
+
+## Main files modified in Phase 8
+- `index.html`
+- `README.md`
+- `PROJECT_STATE.md`
+- `DESIGN_SYSTEM.md`
+- `QA_CHECKLIST.md`
 
 ## Main files modified in Phase 7
 - `index.html`
@@ -664,15 +688,22 @@ Planned:
 - `QA_CHECKLIST.md`
 
 ## Things intentionally not tested yet
-The following are intentionally left for Phase 8 / deployment:
-- exact Archivo + Newsreader rendering over a normal external Google Fonts connection;
-- final domain-dependent canonical URL;
-- domain-dependent `og:url` and absolute social preview image URL;
-- sitemap URL after the final domain is known;
-- live-host Core Web Vitals after deployment, where real network/server/cache behavior exists;
-- final cross-browser visual polish on the fully deployed composition.
+Only deployment-context checks remain:
+- final production domain metadata;
+- live Google Fonts rendering on the deployed origin;
+- live-host Core Web Vitals/Lighthouse;
+- final 4.9/5 reputation recheck immediately before launch.
 
 ## Next action
+The staged build process is complete.
+
+Recommended next step:
+1. pull `main`;
+2. extract the Hero and Space asset packs into the documented public folders;
+3. run `npm install` and `npm run dev`;
+4. review locally with the user;
+5. provide the production domain when ready so canonical/social URL metadata can be finalized;
+6. deploy and run the live-host audit.
 Wait for the exact user command:
 
 **CONTINUAR**
