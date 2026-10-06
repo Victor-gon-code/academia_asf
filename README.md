@@ -4,7 +4,7 @@ Site institucional da ASF Academia Super Forma — Bagé / RS.
 
 ## Estado atual
 
-A Fase 6 conclui a auditoria responsiva integrada do site completo. A próxima etapa é performance, acessibilidade e metadata.
+A Fase 7 conclui performance, acessibilidade e metadata técnica. A próxima etapa é a auditoria visual final do site completo.
 
 ## Stack
 
@@ -163,3 +163,24 @@ Ajustes principais:
 - tipografia crítica de telas muito estreitas tolera texto ampliado.
 
 Também foram testados tamanhos de texto equivalentes a 125% e 150% em larguras representativas sem overflow horizontal.
+
+
+## Fase 7 — performance, acessibilidade e SEO técnico
+
+A fase adiciona:
+- contraste acessível para o laranja em fundos claros através de `--color-accent-ink`;
+- foco visível em superfícies claras, escuras e laranja;
+- menu mobile com `inert`, contenção de foco e Escape;
+- semântica refinada para listas/timeline;
+- `loading` / `fetchpriority` explícitos;
+- redução de escritas redundantes nas animações ligadas ao scroll;
+- Open Graph e Twitter metadata;
+- `ExerciseGym` JSON-LD;
+- `public/robots.txt`.
+
+Medições dos AVIF do handoff:
+- Hero: ~50 / 83 / 126 / 205 KB em 640 / 960 / 1280 / 1649 px;
+- Espaço 01: ~19 / 32 KB;
+- Espaço 02: ~24 / 39 KB.
+
+O domínio final ainda não foi definido. Por isso canonical, `og:url`, `og:image` absoluto e sitemap com URL permanecem deliberadamente pendentes.

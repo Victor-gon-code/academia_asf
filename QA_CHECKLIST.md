@@ -166,31 +166,38 @@ At every target:
 - [x] browser zoom/text resizing does not destroy layout.
 
 ## Phase 7 — performance + accessibility
-- [ ] Production build succeeds.
-- [ ] No dead dependency.
-- [ ] No unused large asset ships.
-- [ ] Image formats/sizes audited.
-- [ ] Hero preload used only if justified by LCP.
-- [ ] Below-fold images lazy-load.
-- [ ] CLS sources reviewed.
-- [ ] INP/interactions reviewed.
-- [ ] Keyboard-only navigation works.
-- [ ] Focus-visible is obvious.
-- [ ] Heading hierarchy is valid.
-- [ ] Landmarks are semantic.
-- [ ] Alt text is useful and not redundant.
-- [ ] Contrast is sufficient.
-- [ ] Menu semantics are correct.
-- [ ] ARIA is used only where needed.
-- [ ] Reduced-motion mode reviewed end-to-end.
-- [ ] Title is local and specific.
-- [ ] Meta description is specific.
-- [ ] Open Graph metadata exists.
-- [ ] Favicon works.
-- [ ] JSON-LD uses ExerciseGym/LocalBusiness appropriately.
-- [ ] JSON-LD excludes unconfirmed phone/hours.
-- [ ] Canonical URL added only after domain is known.
-- [ ] No keyword stuffing.
+- [x] Production build after Phase 7 changes passes. GitHub Actions run `37394333055` succeeded.
+- [x] Computed contrast scan returned zero failing text nodes after fixes in the integrated QA composition.
+- [x] Mobile menu focus trapping/inert behavior tested in Chromium.
+- [x] Reduced-motion Chromium context reported zero active animations after load.
+- [x] Controlled menu interaction audit produced no long task after page settle.
+- [x] Local interaction/layout audit reported CLS 0 during the controlled test.
+- [x] Canonical/domain-dependent metadata is intentionally deferred because no final production domain is known.
+- [x] Production build succeeds.
+- [x] No dead dependency.
+- [x] No unused large asset ships.
+- [x] Image formats/sizes audited.
+- [x] Hero preload used only if justified by LCP.
+- [x] Below-fold images lazy-load.
+- [x] CLS sources reviewed.
+- [x] INP/interactions reviewed.
+- [x] Keyboard-only navigation works.
+- [x] Focus-visible is obvious.
+- [x] Heading hierarchy is valid.
+- [x] Landmarks are semantic.
+- [x] Alt text is useful and not redundant.
+- [x] Contrast is sufficient.
+- [x] Menu semantics are correct.
+- [x] ARIA is used only where needed.
+- [x] Reduced-motion mode reviewed end-to-end.
+- [x] Title is local and specific.
+- [x] Meta description is specific.
+- [x] Open Graph metadata exists.
+- [x] Favicon works.
+- [x] JSON-LD uses ExerciseGym/LocalBusiness appropriately.
+- [x] JSON-LD excludes unconfirmed phone/hours.
+- [x] Canonical URL added only after domain is known.
+- [x] No keyword stuffing.
 
 ## Phase 8 — final visual audit
 Desktop, tablet and phone must all be navigated visually.

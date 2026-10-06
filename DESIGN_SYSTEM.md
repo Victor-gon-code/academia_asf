@@ -738,3 +738,95 @@ The previous `body { min-width: 20rem; }` was removed because rem-based minimum 
 Visit/address/action and very-small-screen display text now have explicit min-width/wrapping protections.
 
 The responsive QA passed at normal size plus 125% and 150% root text scaling on representative mobile, tablet, desktop and ultra-wide widths.
+
+
+---
+
+## 25. Phase 7 accessibility + performance rules
+
+### Accessible orange
+The official ASF orange remains `#F1802E`.
+
+It is excellent against the near-black background but does not reach text contrast requirements on the warm paper surface.
+
+Therefore a derived semantic tone is now locked:
+- `--color-accent: #F1802E` — official visual orange for dark backgrounds, large brand surfaces and decorative lines;
+- `--color-accent-ink: #AC4800` — accessible orange-family text color on the warm paper background.
+
+This is not a brand redesign. It is a UI contrast adaptation.
+
+### Focus
+Focus indication uses two tones:
+- white inner outline;
+- near-black outer ring.
+
+This keeps focus visible on paper, black and orange surfaces without relying on the ASF orange alone.
+
+### Menu accessibility
+When the mobile menu is open:
+- the brand, main content and footer become `inert`;
+- focus remains within the menu/toggle cycle;
+- Escape closes the menu and restores focus;
+- internal navigation moves focus to the destination heading after the menu closes.
+
+### Semantics
+Phase 7 locks:
+- one H1;
+- H2 chapter hierarchy;
+- semantic landmarks;
+- semantic list for reputation themes;
+- named timeline group;
+- useful alt text;
+- no positive tabindex values;
+- external links announce that they open a new tab.
+
+### Performance
+No new runtime dependency is allowed.
+
+Current interaction layer remains:
+- native DOM;
+- passive scroll listener;
+- requestAnimationFrame throttling;
+- Web Animations API;
+- IntersectionObserver.
+
+Scroll-linked style writes are cached so unchanged values are not written repeatedly.
+
+### Image budget
+The browser receives one responsive candidate, not every source.
+
+Measured AVIF derivatives:
+- Hero: ~50 KB at 640 px, ~83 KB at 960 px, ~126 KB at 1280 px, ~205 KB at 1649 px;
+- Space 01: ~19 KB at 320 px, ~32 KB at native 442 px;
+- Space 02: ~24 KB at 320 px, ~39 KB at native 437 px.
+
+Only the Hero is preloaded/eager/high-priority.
+Space photography stays lazy/low-priority.
+
+### Fonts
+Archivo + Newsreader remain the intended production typography.
+
+Current loading strategy:
+- Google Fonts stylesheet;
+- `preconnect` to Google Fonts origins;
+- `display=swap`;
+- system fallbacks.
+
+Do not invent or redistribute font binaries merely to self-host them.
+
+### SEO
+Implemented without inventing a domain:
+- local title;
+- local meta description;
+- robots meta;
+- robots.txt;
+- Open Graph title/description/site name/locale/type;
+- Twitter summary metadata;
+- ExerciseGym JSON-LD.
+
+Deferred until a real production domain exists:
+- canonical URL;
+- `og:url`;
+- absolute `og:image`;
+- sitemap URL;
+- domain-based JSON-LD `@id`.

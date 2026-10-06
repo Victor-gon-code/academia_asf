@@ -7,9 +7,9 @@ Repository: `Victor-gon-code/academia_asf`
 Official digital channel currently allowed: Instagram `@asf.academiasuperforma`
 
 ## Status
-**PHASE 6 COMPLETE — WAITING FOR "CONTINUAR"**
+**PHASE 7 COMPLETE — WAITING FOR "CONTINUAR"**
 
-Do not start Phase 7 until the user explicitly replies **CONTINUAR**.
+Do not start Phase 8 until the user explicitly replies **CONTINUAR**.
 
 ## Objective
 Create a small institutional website with very high visual resolution, authored specifically for ASF, with contemporary sports-editorial direction and the historical weight of a local gym founded in 2001.
@@ -515,25 +515,74 @@ QA note:
 - exact Archivo / Newsreader rendering remains part of the final browser/performance pass, but the structural responsiveness, image geometry, overflow behavior and interaction checks are complete.
 
 ### Phase 7 — Performance + accessibility
+Status: **COMPLETE**
+
+Completed:
+- GitHub Actions production build passed on commit `d902c949b3e2d96466b0884920f3e2227b896cbd` (run `37394333055`);
+- audited the runtime dependency surface: only Vite and TypeScript remain as development dependencies; no application framework, animation library or dead runtime package was added;
+- audited responsive image payloads from the real handoff packs:
+  - Hero AVIF ≈ 50 KB / 83 KB / 126 KB / 205 KB at 640 / 960 / 1280 / 1649 px;
+  - Space 01 AVIF ≈ 19 KB / 32 KB at 320 / native 442 px;
+  - Space 02 AVIF ≈ 24 KB / 39 KB at 320 / native 437 px;
+- kept exactly one LCP preload: the responsive AVIF Hero image;
+- made Hero eagerness explicit with `loading="eager"` + `fetchpriority="high"`;
+- kept environment images lazy and marked them low priority;
+- confirmed intrinsic dimensions on all content images;
+- removed permanent `will-change` from Hero headline spans and avoided a new performance dependency;
+- reduced redundant scroll-style writes by caching the last scroll-linked transform values;
+- local integrated QA measured zero layout shift during the controlled interaction audit;
+- menu interaction audit produced no long task after page settle; observed interaction events remained in the browser's minimum 16 ms reporting bucket;
+- strengthened mobile-menu accessibility with background `inert`, keyboard focus containment, Escape close and deterministic focus behavior;
+- made the skip target programmatically focusable without showing a page-sized focus ring;
+- changed the public reputation keywords from generic div/span markup to a semantic list;
+- named the historical timeline as an accessible group;
+- added explicit new-tab labels to external actions;
+- ran a computed contrast audit and corrected every detected text contrast failure;
+- added `--color-accent-ink: #AC4800` for ASF-orange text on light surfaces while preserving the original orange for dark surfaces and decorative brand lines;
+- increased low-opacity source/note text on dark backgrounds from failing ≈4.0–4.2:1 contrast to a passing level;
+- replaced the single-color focus ring with a two-tone focus treatment that remains visible on light, dark and orange surfaces;
+- keyboard QA confirmed one H1, logical H1→H2 hierarchy, semantic header/nav/main/footer landmarks, no positive tabindex values, and usable alt text;
+- reduced-motion QA confirmed zero active animations after load, no Hero/history transform motion and automatic scrolling behavior instead of smooth scrolling;
+- added robots metadata plus `public/robots.txt`;
+- added Open Graph and Twitter summary metadata without inventing a production URL;
+- added valid `ExerciseGym` JSON-LD with name, description, historical slogan, founding year, confirmed address and official Instagram;
+- JSON-LD intentionally excludes telephone, opening hours, prices and any unconfirmed operational data;
+- canonical URL, `og:url` and absolute social image URL remain intentionally deferred until the final production domain is known;
+- Google Fonts remain external with preconnect + `display=swap`; exact production Archivo/Newsreader network behavior cannot be reproduced in the isolated QA sandbox.
+
+### Phase 8 — Final visual audit
 Status: **NOT STARTED**
 Only start after the user replies **CONTINUAR**.
 
 Planned:
-- production bundle/dependency audit;
-- Core Web Vitals-oriented image/font loading review;
-- keyboard/focus and semantic audit;
-- reduced-motion end-to-end review;
-- metadata/Open Graph/JSON-LD;
-- final SEO safeguards;
-- production-font rendering check.
+- navigate the complete page visually on phone, tablet, desktop and ultra-wide;
+- inspect exact production fonts where available;
+- check for any remaining "AI/template" feeling;
+- check section rhythm, copy, image loading and transitions as one complete experience;
+- retest all links/buttons/menu repeatedly;
+- verify no final console error, flash, overlap, clipped word or unexpected scroll behavior;
+- make only final polish fixes, not add gratuitous features.
 
 ## Current problems / risks
-1. Public phone/WhatsApp/hour information is divergent and must remain unpublished.
-2. No final production domain is defined yet, so canonical URL metadata remains pending.
-3. 4.9/5 is changeable public reputation data; if surfaced in production, it should be reviewed near launch.
-4. The canonical raster logo must remain archived outside the generated SVG derivative; the SVG is a traced production derivative, not a replacement identity.
-5. Google Fonts is currently external. Font self-hosting can be reconsidered during the performance phase if measurements justify it.
-6. The Hero binary image derivatives are not committed by the current connector. Before local review/deploy, copy the provided asset pack into `public/assets/hero/`. The code and build intentionally use stable public paths for this handoff.
+1. Public phone/WhatsApp/hour information remains divergent and must stay unpublished until confirmed.
+2. Final production domain is still unknown. Canonical URL, `og:url`, absolute `og:image`, sitemap URL and production-domain JSON-LD identifiers must not be invented.
+3. 4.9/5 is changeable public reputation data and should be reviewed again immediately before launch.
+4. Google Fonts are external. The project uses preconnect + `display=swap`, but exact remote font timing cannot be measured in the isolated QA runtime.
+5. Hero and Space binary derivatives still require the two previously delivered handoff packs to be present under `public/assets/hero/` and `public/assets/space/` after pull.
+6. Exact Archivo + Newsreader visual rendering should receive one final inspection in Phase 8 in a browser with normal network access.
+
+## Main files modified in Phase 7
+- `index.html`
+- `public/robots.txt`
+- `src/styles/tokens.css`
+- `src/styles/base.css`
+- `src/styles/sections.css`
+- `src/scripts/navigation.ts`
+- `src/scripts/motion.ts`
+- `README.md`
+- `PROJECT_STATE.md`
+- `DESIGN_SYSTEM.md`
+- `QA_CHECKLIST.md`
 
 ## Main files modified in Phase 6
 - `src/styles/reset.css`
@@ -615,16 +664,17 @@ Planned:
 - `QA_CHECKLIST.md`
 
 ## Things intentionally not tested yet
-The following belong to later phases:
-- below-fold image loading for the space chapter;
-- final Core Web Vitals/Lighthouse on the complete production page;
-- final SEO/JSON-LD;
-- canonical URL after the production domain is known;
-- final cross-browser production audit after every chapter exists.
+The following are intentionally left for Phase 8 / deployment:
+- exact Archivo + Newsreader rendering over a normal external Google Fonts connection;
+- final domain-dependent canonical URL;
+- domain-dependent `og:url` and absolute social preview image URL;
+- sitemap URL after the final domain is known;
+- live-host Core Web Vitals after deployment, where real network/server/cache behavior exists;
+- final cross-browser visual polish on the fully deployed composition.
 
 ## Next action
 Wait for the exact user command:
 
 **CONTINUAR**
 
-Then begin Phase 7 only.
+Then begin Phase 8 only.
