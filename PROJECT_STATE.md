@@ -7,9 +7,9 @@ Repository: `Victor-gon-code/academia_asf`
 Official digital channel currently allowed: Instagram `@asf.academiasuperforma`
 
 ## Status
-**PHASE 5 COMPLETE — WAITING FOR "CONTINUAR"**
+**PHASE 6 COMPLETE — WAITING FOR "CONTINUAR"**
 
-Do not start Phase 6 until the user explicitly replies **CONTINUAR**.
+Do not start Phase 7 until the user explicitly replies **CONTINUAR**.
 
 ## Objective
 Create a small institutional website with very high visual resolution, authored specifically for ASF, with contemporary sports-editorial direction and the historical weight of a local gym founded in 2001.
@@ -488,16 +488,43 @@ Validation note:
 - integrated browser/screenshot QA remains intentionally reserved for Phase 6 after the two asset handoff ZIPs are present locally.
 
 ### Phase 6 — Deep responsiveness
+Status: **COMPLETE**
+
+Completed:
+- assembled a local integrated Chromium QA build using the complete site code plus both image handoff packs;
+- verified all required target viewports: 320×568, 360×800, 390×844, 430×932, 768×1024, 1024×768, 1280×720, 1366×768, 1440×900 and 1920×1080;
+- confirmed zero horizontal document overflow at every required viewport;
+- confirmed all five canonical production images used by the page loaded successfully in the integrated QA environment;
+- confirmed no JavaScript page errors or console errors in the integrated QA run;
+- verified section boundaries remain contiguous with no accidental gaps or scroll snapping;
+- visually reviewed mobile, tablet, desktop and ultra-wide compositions;
+- moved the portrait tablet breakpoint so 768–895 px portrait receives the intentionally stacked/mobile art direction and accessible menu instead of a cramped desktop composition;
+- retained the split desktop Hero in landscape tablet widths where it reads better;
+- added a dedicated small-landscape Hero treatment so narrow phones do not create a 4:5 image taller than multiple landscape viewports;
+- repeatedly opened/closed the mobile menu on 667 landscape, 768 portrait and 880 portrait; scroll lock, Escape close and focus restoration remained stable;
+- removed the root-relative `20rem` body minimum width that caused overflow when users enlarge default text size;
+- added resilient wrapping/min-width rules around the visit address and Instagram action;
+- tuned very-small-screen year/theme/closing typography to remain inside the viewport under enlarged text;
+- tested enlarged root text at 125% and 150% on 320, 390, 768, 1024 and 1920 widths with no horizontal overflow after the fixes;
+- visually inspected the Hero at the 895/896 px layout transition and at 667×375, 740×360 and 844×390 landscape sizes;
+- retained native scrolling with no auto-pull, snap or pin behavior.
+
+QA note:
+- the automated local audit used system-installed Inter / EB Garamond as close layout fallbacks because the sandbox cannot fetch Google Fonts externally;
+- exact Archivo / Newsreader rendering remains part of the final browser/performance pass, but the structural responsiveness, image geometry, overflow behavior and interaction checks are complete.
+
+### Phase 7 — Performance + accessibility
 Status: **NOT STARTED**
 Only start after the user replies **CONTINUAR**.
 
 Planned:
-- full integrated layout audit at all target viewport sizes;
-- verify all assets after local handoff packs are present;
-- inspect horizontal overflow, clipped letters, overlaps, empty gaps and section heights;
-- verify mobile menu throughout the complete page;
-- verify portrait/landscape transitions and native scroll behavior;
-- fix any integrated issues before performance/accessibility audit.
+- production bundle/dependency audit;
+- Core Web Vitals-oriented image/font loading review;
+- keyboard/focus and semantic audit;
+- reduced-motion end-to-end review;
+- metadata/Open Graph/JSON-LD;
+- final SEO safeguards;
+- production-font rendering check.
 
 ## Current problems / risks
 1. Public phone/WhatsApp/hour information is divergent and must remain unpublished.
@@ -506,6 +533,16 @@ Planned:
 4. The canonical raster logo must remain archived outside the generated SVG derivative; the SVG is a traced production derivative, not a replacement identity.
 5. Google Fonts is currently external. Font self-hosting can be reconsidered during the performance phase if measurements justify it.
 6. The Hero binary image derivatives are not committed by the current connector. Before local review/deploy, copy the provided asset pack into `public/assets/hero/`. The code and build intentionally use stable public paths for this handoff.
+
+## Main files modified in Phase 6
+- `src/styles/reset.css`
+- `src/scripts/navigation.ts`
+- `src/styles/sections.css`
+- `src/styles/responsive.css`
+- `README.md`
+- `PROJECT_STATE.md`
+- `DESIGN_SYSTEM.md`
+- `QA_CHECKLIST.md`
 
 ## Main files modified in Phase 5
 - `index.html`
@@ -589,4 +626,4 @@ Wait for the exact user command:
 
 **CONTINUAR**
 
-Then begin Phase 6 only.
+Then begin Phase 7 only.

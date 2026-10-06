@@ -4,7 +4,7 @@ Site institucional da ASF Academia Super Forma — Bagé / RS.
 
 ## Estado atual
 
-A Fase 5 fecha a narrativa: assinatura "Uma Questão de Saúde", endereço confirmado, mapa, Instagram, encerramento e footer. A próxima etapa é a auditoria responsiva integrada.
+A Fase 6 conclui a auditoria responsiva integrada do site completo. A próxima etapa é performance, acessibilidade e metadata.
 
 ## Stack
 
@@ -146,3 +146,20 @@ Continuam deliberadamente fora do site até confirmação:
 - planos;
 - promoções;
 - condições de matrícula.
+
+
+## Fase 6 — responsividade
+
+Auditoria integrada concluída nos seguintes tamanhos:
+
+`320×568`, `360×800`, `390×844`, `430×932`, `768×1024`, `1024×768`, `1280×720`, `1366×768`, `1440×900` e `1920×1080`.
+
+Ajustes principais:
+- retrato de tablet usa composição empilhada até 55.99rem;
+- landscape intermediário preserva a composição dividida;
+- landscape estreito recebe Hero 4:3;
+- remoção do `min-width: 20rem` dependente de tamanho de fonte;
+- endereço e ações de visita agora quebram de forma segura;
+- tipografia crítica de telas muito estreitas tolera texto ampliado.
+
+Também foram testados tamanhos de texto equivalentes a 125% e 150% em larguras representativas sem overflow horizontal.

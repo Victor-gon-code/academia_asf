@@ -134,34 +134,35 @@ This checklist is cumulative. A phase is not complete because the code compiles;
 - [ ] No console errors.
 
 ## Phase 6 — deep responsiveness
+- [x] Integrated Chromium audit used both Hero and Space asset packs.
 Test all:
-- [ ] 320 × 568
-- [ ] 360 × 800
-- [ ] 390 × 844
-- [ ] 430 × 932
-- [ ] 768 × 1024
-- [ ] 1024 × 768
-- [ ] 1280 × 720
-- [ ] 1366 × 768
-- [ ] 1440 × 900
-- [ ] 1920 × 1080
+- [x] 320 × 568
+- [x] 360 × 800
+- [x] 390 × 844
+- [x] 430 × 932
+- [x] 768 × 1024
+- [x] 1024 × 768
+- [x] 1280 × 720
+- [x] 1366 × 768
+- [x] 1440 × 900
+- [x] 1920 × 1080
 
 At every target:
-- [ ] no horizontal overflow;
-- [ ] no clipped title;
-- [ ] no clipped individual letter;
-- [ ] no text-on-text collision;
-- [ ] no button outside viewport;
-- [ ] no image covering copy;
-- [ ] no distorted image;
-- [ ] no absolute element escaping its section;
-- [ ] no inexplicable empty gap;
-- [ ] header remains usable;
-- [ ] menu remains usable;
-- [ ] footer height is reasonable;
-- [ ] portrait/landscape transitions are stable;
-- [ ] scroll does not "pull" toward a section;
-- [ ] browser zoom/text resizing does not destroy layout.
+- [x] no horizontal overflow;
+- [x] no clipped title;
+- [x] no clipped individual letter;
+- [x] no text-on-text collision;
+- [x] no button outside viewport;
+- [x] no image covering copy;
+- [x] no distorted image;
+- [x] no absolute element escaping its section;
+- [x] no inexplicable empty gap;
+- [x] header remains usable;
+- [x] menu remains usable;
+- [x] footer height is reasonable;
+- [x] portrait/landscape transitions are stable;
+- [x] scroll does not "pull" toward a section;
+- [x] browser zoom/text resizing does not destroy layout.
 
 ## Phase 7 — performance + accessibility
 - [ ] Production build succeeds.

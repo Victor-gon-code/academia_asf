@@ -709,3 +709,32 @@ The narrative closes with:
 The footer remains deliberately minimal.
 
 No phone, WhatsApp, hours, price or plan is published.
+
+
+---
+
+## 24. Phase 6 responsive audit decisions
+
+### Portrait tablet
+The mobile/stacked art direction now extends through 55.99rem **only in portrait orientation**.
+
+This keeps 768–895 px portrait layouts readable:
+- dedicated menu;
+- full-width copy;
+- photograph below the Hero copy;
+- stacked content chapters.
+
+### Landscape
+Widths above 43.99rem in landscape return to the desktop split composition.
+
+Reason:
+a full-width 4:5 Hero photograph on a short landscape viewport created an unnecessarily tall opening.
+
+For narrower landscape phones (≤43.99rem), the mobile structure remains but the Hero image changes to 4:3 and typography compresses slightly.
+
+### Enlarged text
+The previous `body { min-width: 20rem; }` was removed because rem-based minimum width expands when the user enlarges default text size.
+
+Visit/address/action and very-small-screen display text now have explicit min-width/wrapping protections.
+
+The responsive QA passed at normal size plus 125% and 150% root text scaling on representative mobile, tablet, desktop and ultra-wide widths.

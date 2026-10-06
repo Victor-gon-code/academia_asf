@@ -1,4 +1,4 @@
-const MOBILE_QUERY = '(max-width: 47.99rem)';
+const MOBILE_QUERY = '(max-width: 43.99rem), (max-width: 55.99rem) and (orientation: portrait)';
 
 export function initNavigation(): void {
   const toggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');

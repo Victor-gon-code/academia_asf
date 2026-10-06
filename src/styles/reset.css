@@ -22,7 +22,7 @@ figure {
 }
 
 body {
-  min-width: 20rem;
+  min-width: 0;
 }
 
 img,

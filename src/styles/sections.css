@@ -812,6 +812,9 @@
 }
 
 .visit__address {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
   display: grid;
   gap: 0.4rem;
   font-style: normal;
@@ -819,6 +822,11 @@
   font-weight: 600;
   letter-spacing: -0.045em;
   line-height: 1.02;
+}
+
+.visit__address span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .visit__address span:last-child {
@@ -834,6 +842,7 @@
 }
 
 .visit__actions a {
+  min-width: 0;
   min-height: 4.2rem;
   padding-block: 1rem;
   display: flex;
@@ -847,7 +856,13 @@
   transition: color 180ms var(--ease-out), padding-left 180ms var(--ease-out);
 }
 
+.visit__actions a span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .visit__actions a span:last-child {
+  flex: 0 0 auto;
   color: var(--color-accent);
   font-size: 1.15em;
 }
