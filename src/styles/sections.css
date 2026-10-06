@@ -52,7 +52,6 @@
 
 .hero__line > span {
   display: block;
-  will-change: transform;
 }
 
 .hero__line--last {
@@ -171,7 +170,7 @@
 .history__header .eyebrow {
   grid-area: eyebrow;
   align-self: start;
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
 }
 
 .history__header h2 {
@@ -211,7 +210,7 @@
 }
 
 .history__year--end {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
 }
 
 .history__track {
@@ -381,7 +380,7 @@
 .people__source {
   max-width: 44rem;
   margin-top: 1.35rem;
-  color: rgb(255 255 255 / 43%);
+  color: rgb(255 255 255 / 52%);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
   line-height: 1.45;
@@ -446,7 +445,7 @@
 
 .training__list li::before {
   content: counter(training, decimal-leading-zero);
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -530,7 +529,7 @@
 }
 
 .space__header .eyebrow {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
 }
 
 .space__header h2 {
@@ -588,7 +587,7 @@
 }
 
 .space__figure figcaption span {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-weight: 700;
   letter-spacing: 0.08em;
 }
@@ -703,10 +702,13 @@
 }
 
 .proof__keywords {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   border-top: 1px solid var(--color-border-dark);
 }
 
-.proof__keywords span {
+.proof__keywords li {
   padding-block: 0.9rem;
   display: block;
   border-bottom: 1px solid var(--color-border-dark);
@@ -718,7 +720,7 @@
 .proof__note {
   max-width: 40rem;
   margin-top: clamp(3rem, 6vw, 5rem);
-  color: rgb(255 255 255 / 42%);
+  color: rgb(255 255 255 / 52%);
   font-size: 0.72rem;
   line-height: 1.45;
 }
@@ -789,7 +791,7 @@
 }
 
 .visit__header .eyebrow {
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
 }
 
 .visit__header h2 {
@@ -863,7 +865,7 @@
 
 .visit__actions a span:last-child {
   flex: 0 0 auto;
-  color: var(--color-accent);
+  color: var(--color-accent-ink);
   font-size: 1.15em;
 }
 
@@ -947,7 +949,7 @@
 @media (hover: hover) {
   .visit__actions a:hover {
     padding-left: 0.35rem;
-    color: var(--color-accent);
+    color: var(--color-accent-ink);
   }
 
   .closing__inner a:hover,

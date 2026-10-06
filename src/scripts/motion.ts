@@ -129,29 +129,43 @@ export function initMotion(): void {
   initSectionReveals();
 
   let ticking = false;
+  let lastHeroScale = -1;
+  let lastHandoffProgress = -1;
+  let lastHistoryProgress = -1;
 
   const updateScrollMotion = (): void => {
     const viewportHeight = window.innerHeight || 1;
     const heroRect = hero.getBoundingClientRect();
-    const heroProgress = clamp(-heroRect.top / Math.max(heroRect.height, 1));
+    const historyRect = history.getBoundingClientRect();
 
-    if (image) {
-      image.style.transform = `scale(${(1 + heroProgress * 0.03).toFixed(4)})`;
+    const heroProgress = clamp(-heroRect.top / Math.max(heroRect.height, 1));
+    const heroScale = 1 + heroProgress * 0.03;
+
+    if (image && Math.abs(heroScale - lastHeroScale) > 0.0005) {
+      image.style.transform = `scale(${heroScale.toFixed(4)})`;
+      lastHeroScale = heroScale;
     }
 
     if (handoff) {
       const handoffProgress = clamp((heroProgress - 0.42) / 0.42);
-      handoff.style.transform = `scaleX(${handoffProgress.toFixed(4)})`;
-      handoff.style.transformOrigin = 'left center';
+
+      if (Math.abs(handoffProgress - lastHandoffProgress) > 0.001) {
+        handoff.style.transform = `scaleX(${handoffProgress.toFixed(4)})`;
+        handoff.style.transformOrigin = 'left center';
+        lastHandoffProgress = handoffProgress;
+      }
     }
 
     if (historyLine) {
-      const historyRect = history.getBoundingClientRect();
       const start = viewportHeight * 0.86;
       const end = viewportHeight * 0.42;
       const historyProgress = clamp((start - historyRect.top) / Math.max(start - end, 1));
-      historyLine.style.transform = `scaleX(${historyProgress.toFixed(4)})`;
-      historyLine.style.transformOrigin = 'left center';
+
+      if (Math.abs(historyProgress - lastHistoryProgress) > 0.001) {
+        historyLine.style.transform = `scaleX(${historyProgress.toFixed(4)})`;
+        historyLine.style.transformOrigin = 'left center';
+        lastHistoryProgress = historyProgress;
+      }
     }
 
     ticking = false;

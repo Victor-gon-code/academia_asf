@@ -2,9 +2,21 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#030708" />
     <meta name="description" content="ASF Academia Super Forma, em Bagé — RS. Uma academia com história, acompanhamento e treino levado a sério desde 2001." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ASF Academia Super Forma" />
+    <meta property="og:title" content="ASF Academia Super Forma — Bagé / RS" />
+    <meta property="og:description" content="Há 25 anos, treino é uma questão de saúde. Conheça a ASF Academia Super Forma, em Bagé / RS." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ASF Academia Super Forma — Bagé / RS" />
+    <meta name="twitter:description" content="Há 25 anos, treino é uma questão de saúde. Conheça a ASF Academia Super Forma, em Bagé / RS." />
+
     <title>ASF Academia Super Forma — Bagé / RS</title>
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -23,6 +35,27 @@
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ExerciseGym",
+        "name": "ASF Academia Super Forma",
+        "description": "Academia em Bagé, Rio Grande do Sul, com atuação desde 2001 e foco em acompanhamento, treino e saúde.",
+        "slogan": "Uma Questão de Saúde",
+        "foundingDate": "2001",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Quinze de Novembro, 1510",
+          "addressLocality": "Bagé",
+          "addressRegion": "RS",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://www.instagram.com/asf.academiasuperforma/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -62,13 +95,14 @@
             class="primary-nav__instagram"
             href="https://www.instagram.com/asf.academiasuperforma/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            aria-label="Instagram da ASF (abre em nova aba)"
           >Instagram</a>
         </nav>
       </div>
     </header>
 
-    <main id="conteudo">
+    <main id="conteudo" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title" data-hero>
         <div class="hero__inner">
           <div class="hero__copy">
@@ -113,6 +147,7 @@
                 width="1649"
                 height="2048"
                 alt="Professor da ASF acompanha de perto um aluno durante um exercício na academia"
+                loading="eager"
                 fetchpriority="high"
                 decoding="async"
               />
@@ -136,7 +171,7 @@
             </p>
           </header>
 
-          <div class="history__timeline" aria-label="Da fundação em 2001 aos 25 anos em 2026">
+          <div class="history__timeline" role="group" aria-label="Da fundação em 2001 aos 25 anos em 2026">
             <strong class="history__year">2001</strong>
             <div class="history__track" aria-hidden="true"><span data-history-line></span></div>
             <strong class="history__year history__year--end">2026</strong>
@@ -269,6 +304,7 @@
                   width="442"
                   height="547"
                   loading="lazy"
+                  fetchpriority="low"
                   decoding="async"
                   alt="Área da ASF com máquinas de musculação, bancos azuis e piso de treino"
                 />
@@ -338,11 +374,11 @@
               <strong>atendimento, orientação e atenção.</strong>
             </p>
 
-            <div class="proof__keywords" aria-label="Temas recorrentes nas avaliações públicas" data-reveal-list>
-              <span>Atendimento</span>
-              <span>Orientação</span>
-              <span>Atenção</span>
-            </div>
+            <ul class="proof__keywords" aria-label="Temas recorrentes nas avaliações públicas" data-reveal-list>
+              <li>Atendimento</li>
+              <li>Orientação</li>
+              <li>Atenção</li>
+            </ul>
           </div>
 
           <p class="proof__note">
@@ -378,7 +414,8 @@
               <a
                 href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Quinze%20de%20Novembro%2C%201510%2C%20S%C3%A3o%20Judas%2C%20Bag%C3%A9%20RS"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="Abrir endereço da ASF no Google Maps (abre em nova aba)"
               >
                 <span>Abrir no mapa</span>
                 <span aria-hidden="true">↗</span>
@@ -387,7 +424,8 @@
               <a
                 href="https://www.instagram.com/asf.academiasuperforma/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="Instagram @asf.academiasuperforma (abre em nova aba)"
               >
                 <span>@asf.academiasuperforma</span>
                 <span aria-hidden="true">↗</span>
@@ -423,7 +461,8 @@
         <a
           href="https://www.instagram.com/asf.academiasuperforma/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
+          aria-label="Instagram da ASF (abre em nova aba)"
         >Instagram</a>
       </div>
     </footer>
